@@ -1,0 +1,46 @@
+name: Deploy to Azure Static Web Apps
+
+# Publishes src/ to the site's Azure Static Web App on every push to main. Pull requests are not
+# deployed: a pull request from a fork cannot read the deployment token, so a preview job would only
+# fail for outside contributors.
+#
+# Until the Static Web App exists and its deployment token is stored as the repository secret
+# AZURE_STATIC_WEB_APPS_API_TOKEN, the job checks out, says so, and deploys nothing, so a push stays
+# green. Setting the secret is all it takes to start publishing.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      HAS_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: No deployment token yet
+        if: env.HAS_TOKEN != 'true'
+        run: echo "::notice::AZURE_STATIC_WEB_APPS_API_TOKEN is not set; nothing was deployed."
+
+      - name: Deploy src/
+        if: env.HAS_TOKEN == 'true'
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: src
+          output_location: ""
+          api_location: ""
+          skip_app_build: true

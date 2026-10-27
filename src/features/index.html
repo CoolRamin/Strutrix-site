@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Features — Strutrix Studio</title>
+<meta name="description" content="What Strutrix Studio computes: the 3D frame model, loads and ASCE 7-22 combinations, first-order and direct analysis, the equilibrium audit, AISC 360-22 steel design by LRFD and ASD, tapered tubes to ASCE 48-19, results, reports and exports, and the limits of version 1." />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#0a0f1c" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Strutrix Studio" />
+<meta property="og:url" content="https://www.strutrix.com/features/" />
+<meta property="og:title" content="Strutrix Studio features: the engineering, in detail" />
+<meta property="og:description" content="The methods and standards behind Strutrix Studio, how its results are checked, and where it stops." />
+<link rel="canonical" href="https://www.strutrix.com/features/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/styles.css" />
+<script src="/site.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="/" aria-label="Strutrix Studio home">
+      <img class="brand__mark" src="/images/strutrix-mark.svg" alt="" width="34" height="34" />
+      <span class="brand__name">Strutrix <span>Studio</span></span>
+    </a>
+    <div class="nav__menu" id="site-menu">
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/#pro">Pro</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a class="icon-btn" href="https://github.com/CoolRamin/Strutrix-site" target="_blank" rel="noopener" aria-label="Strutrix Studio on GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        </a>
+        <a class="btn btn--primary btn--sm" href="/#download">Coming soon</a>
+      </div>
+    </div>
+    <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero on-dark" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Features</p>
+      <h1 id="page-title">The engineering, in detail.</h1>
+      <p>What Strutrix Studio computes for a three-dimensional frame, the methods and standards it follows, how its results are checked, and where version 1 stops. The built-in manual states every method and assumption so you can verify the results yourself.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="/#download">Coming soon</a>
+        <a class="btn btn--secondary" href="/pricing/">Compare plans</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page">
+    <div class="container">
+      <ul>
+        <li><a href="#model">Model</a></li>
+        <li><a href="#loads">Loads</a></li>
+        <li><a href="#combinations">Combinations</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#design">Steel design</a></li>
+        <li><a href="#tubes">Tapered tubes</a></li>
+        <li><a href="#lines">Line loading</a></li>
+        <li><a href="#data">Reports and data</a></li>
+        <li><a href="#cloud">Cloud</a></li>
+        <li><a href="#link">Structure link</a></li>
+        <li><a href="#connect">Your AI</a></li>
+        <li><a href="#limits">Limits</a></li>
+        <li><a href="#validation">Validation</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== Model ===================== -->
+  <section id="model" class="alt-band" aria-labelledby="model-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">The model &middot; Free</p>
+        <h2 id="model-title">Joints and members, connected the way they are built.</h2>
+        <p>A frame is any structure you can describe as joints connected by members, each carrying axial force, shear in two directions, torsion and bending about two axes. Global Z is up, the same vertical FoundaTrix Studio and PileAxis use, so a structure and its foundations in one job read each other's directions without conversion.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Members</p><span class="badge badge--free">Free</span></div>
+          <h3>Entered whole, divided for you</h3>
+          <ul class="check-list">
+            <li>A member is drawn end to end; the analysis divides it at every joint on its centre line and every crossing, and reports it whole</li>
+            <li>Crossings connect, or pass unconnected, as the model chooses (an X-brace not bolted at its middle)</li>
+            <li>Beams, columns, vertical and horizontal braces, each type with its own drawing colour and design role; braces pinned at both ends</li>
+            <li>Local axes from global Z or a reference joint, turned by an angle, the section drawn as the analysis bends it</li>
+            <li>A member can be made inactive: drawn, and left out of the analysis</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Boundary conditions</p><span class="badge badge--free">Free</span></div>
+          <h3>Supports, releases and rigid parts</h3>
+          <ul class="check-list">
+            <li>Each of a joint's six degrees free, fixed, on a spring, or on a compression-only or tension-only spring</li>
+            <li>Settlements and rotations imposed on held supports per load case</li>
+            <li>Each member end releasing any of its six forces, or partially fixed through a rotational spring</li>
+            <li>Rigid end offsets, results reported face to face, and rigid links tying a joint to its master</li>
+            <li>Tension-only and compression-only members, found by iterating the set of members that work</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">The Studio</p><span class="badge badge--free">Free</span></div>
+          <h3>Drafting precision in 3D</h3>
+          <ul class="check-list">
+            <li>Joints placed and members drawn on a work plane on XY, YZ or ZX, at any named elevation, with a 2D view of the plane</li>
+            <li>Set-out grid lines with bubbles, a drafting grid laid out by spacing or listed increments, skewed if need be</li>
+            <li>Object snaps, quarter and third points among them, typed coordinates and relative distances</li>
+            <li>Move, copy, array, rotate, mirror and scale; split, merge, extend, trim, match properties, relabel, merge coincident joints</li>
+            <li>Select by criteria read from the objects' own properties, and saved selections kept with the model</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Sections and materials</p><span class="badge badge--free">Free</span></div>
+          <h3>Every property from the AISC database</h3>
+          <ul class="check-list">
+            <li>W, M, S, C, MC, L, WT, rectangular and round HSS and pipe, from the AISC Shapes Database v16.0, every property the database's own value</li>
+            <li>ASTM A992, A572 Grade 50, A36, A500 Grade C, A1085 and A53 Grade B, or a general material of your own</li>
+            <li>Section sets: members that share a section, a material and design rules, sized together</li>
+            <li>A section stated by its properties alone, for a member that is not designed</li>
+          </ul>
+        </div>
+        <div class="spec-card spec-card--wide reveal">
+          <div class="spec-card__head"><p class="card__kicker">Checking the model</p><span class="badge badge--free">Free</span></div>
+          <h3>Fifty checks before the first run</h3>
+          <ul class="check-list">
+            <li>Errors the analysis would refuse: a part standing on no support, a member of no length, a release set that leaves a member a mechanism, a load placed off its member</li>
+            <li>Warnings where it would run but probably not as meant: two joints a hair apart, two members along one line, members passing close without meeting, a joint nothing holds along an axis, a load drawn twice</li>
+            <li>Each finding coded and listed in the Validation pane, the joint or member it names selected with a click, every distance in your units</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Loads ===================== -->
+  <section id="loads" aria-labelledby="loads-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Loads &middot; Free</p>
+        <h2 id="loads-title">Every load applied exactly where it acts.</h2>
+        <p>Loads are entered in basic load cases, as many as the structure needs, each in its ASCE 7-22 load category: dead, live, roof live, snow, rain, wind or earthquake. A lateral case is reversible along an axis, as an earthquake is, or one way, as a wind case is.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Kinds of load</p><span class="badge badge--free">Free</span></div>
+          <h3>At joints, along members, over areas</h3>
+          <ul class="check-list">
+            <li>Joint forces and moments; member point loads and moments, in global or local axes</li>
+            <li>Uniform or linearly varying loads over all or part of a member, per length or projected, so snow per unit of plan puts nothing on a column</li>
+            <li>Thermal loads: a uniform change, and a difference between opposite faces</li>
+            <li>Self-weight from each section's area and its material's unit weight, with a factor along each axis</li>
+            <li>A load inside a member is never moved to a joint: its effect on the member's ends is found exactly</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Area loads</p><span class="badge badge--free">Free</span></div>
+          <h3>A pressure over a region, spread to its members</h3>
+          <ul class="check-list">
+            <li>Regions cornered at joints, so they move with the frame, on a floor, a roof or a wall</li>
+            <li>One way, in the span you state, or two way, each side taking the part of the panel nearest it</li>
+            <li>Delivered as exact distributed loads; what the members carry sums to the pressure times the area</li>
+            <li>A side of a panel with no member on it reported with the load it would have carried</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Combinations ===================== -->
+  <section id="combinations" class="alt-band" aria-labelledby="combinations-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Load combinations &middot; Free</p>
+        <h2 id="combinations-title">ASCE 7-22, written out for you, traced to its rows.</h2>
+        <p>A combination is a list of terms, each a basic case, a whole category or another combination, with a factor. Each states whether it is solved, how it is analysed, its basis (LRFD, ASD or service), its notional loads and whether the steel is designed from it.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">The generator</p><span class="badge badge--free">Free</span></div>
+          <h3>Sections 2.3 and 2.4, every choice expanded</h3>
+          <ul class="check-list">
+            <li>Strength and allowable stress combinations for the categories the model uses, atmospheric ice when asked</li>
+            <li>"Lr or S or R" made one combination per choice, each lateral case in each of its senses</li>
+            <li>The redundancy factor &rho;, the vertical seismic effect E<sub>v</sub> = 0.2&nbsp;S<sub>DS</sub>&nbsp;D and the orthogonal 100%/30% rule when asked</li>
+            <li>Service combinations for deflections, and a row that repeats another left out and counted</li>
+            <li>Each named after its row and direction: <code>ASCE 7-22 2.3.1 5a, W -X, notional -X</code></li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Notional loads</p><span class="badge badge--free">Free</span></div>
+          <h3>Out-of-plumbness, from the combination's own gravity</h3>
+          <ul class="check-list">
+            <li>N<sub>i</sub> = 0.002&nbsp;&alpha;&nbsp;Y<sub>i</sub> at every level, &alpha; = 1.0 for LRFD and 1.6 for ASD</li>
+            <li>Every downward load given a horizontal twin where it stands, so each level's notional load is its own gravity load's</li>
+            <li>Gravity-only combinations written in four directions; wind and earthquake combinations in the direction of their load</li>
+            <li>The permission of C2.2b(d) to limit them to gravity combinations, offered as a choice that is yours to justify</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Analysis ===================== -->
+  <section id="analysis" aria-labelledby="analysis-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Analysis &middot; Free</p>
+        <h2 id="analysis-title">The stiffness method, to first or second order, per combination.</h2>
+        <p>The whole structure's stiffness is assembled from its members and factorised once; every basic case is a substitution and every first-order combination a weighted sum. A combination marked for second order is solved on its own, because second-order results do not add.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Direct analysis</p><span class="badge badge--free">Free</span></div>
+          <h3>AISC 360-22 Chapter C, as written</h3>
+          <ul class="check-list">
+            <li>Each member cut into short pieces with the stiffness its axial force gives it: P-&Delta; and P-&delta; both included</li>
+            <li>0.80 times the axial, shear and torsional stiffness and 0.80&nbsp;&tau;<sub>b</sub> times the flexural stiffness, &tau;<sub>b</sub> from each member's own axial force</li>
+            <li>Iterated until the axial forces and the stiffness agree; a structure that buckles is reported unstable, naming where</li>
+            <li>ASD analysed at 1.6 times the combination and divided back, as Section C2.1(d) requires</li>
+            <li>Or an elastic second-order analysis at full stiffness, for the actual displacements under factored loads</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">One-way members and supports</p><span class="badge badge--free">Free</span></div>
+          <h3>What works, found by iteration</h3>
+          <ul class="check-list">
+            <li>A tension-only brace compressed, or a compression-only strut pulled, lets go for the next pass; one that has let go takes hold again when its ends move back</li>
+            <li>Compression-only springs for a footing that may lift, tension-only springs as their mirror</li>
+            <li>The passes repeat until nothing changes, and the result lists what let go</li>
+            <li>A structure left unable to stand is reported unstable, naming what let go</li>
+          </ul>
+        </div>
+        <div class="spec-card spec-card--wide reveal">
+          <div class="spec-card__head"><p class="card__kicker">The equilibrium audit</p><span class="badge badge--free">Free</span></div>
+          <h3>Every combination checked against statics, independently of the solver</h3>
+          <ul class="check-list">
+            <li>The reactions summed against the loads, notional loads and self-weight included, in force and in moment about the origin</li>
+            <li>A combination passes when what is left is no more than a millionth of the larger of its loads and its reactions</li>
+            <li>One that fails is reported and shown with no result: this is what tells you a result is in equilibrium, rather than that a solver stopped</li>
+            <li>Results belong to the model they came from: any change the analysis reads puts them out of date until the next run</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Results ===================== -->
+  <section id="results" class="alt-band" aria-labelledby="results-title">
+    <div class="container">
+      <div class="feature-row reveal">
+        <div class="feature-row__text">
+          <p class="eyebrow">Results &middot; Free</p>
+          <h3 id="results-title">Nothing interpolated between joints.</h3>
+          <p>A member's forces and deflections are reported at its joints and at points between them no more than six inches apart, each exact for the analysis. The forces follow by statics from the member's end forces and its loads; the deflections by integrating its curvature in closed form. In a first-order combination, each force's largest and least value along a member is found exactly, wherever it falls.</p>
+          <ul class="check-list">
+            <li>The deformed shape of any combination, magnified as you choose, and each member coloured by its axial force, shear, torsion, moment or deflection</li>
+            <li>Any force's diagram drawn on every member at once, a moment on its compression face, under one combination or as the envelope of them all, with the values written</li>
+            <li>The Member Diagram of one member: its six forces along it under each combination, and their envelope</li>
+            <li>Reactions, displacements, member forces, deflections with L/&Delta;, and the reaction and member envelopes with the combination that gave each value</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Results &middot; Diagram</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/member-diagrams.svg" width="1200" height="760" loading="lazy" alt="Illustration of the bending moment envelope drawn on every member of a two-bay, two-storey frame, green where positive and blue where negative, its largest values written, above the Member Diagram of one beam under three combinations with its governing check marked." /></div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Steel design ===================== -->
+  <section id="design" aria-labelledby="design-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Steel design &middot; Free</p>
+        <h2 id="design-title">AISC 360-22, LRFD and ASD, at every station.</h2>
+        <p>Every run designs the steel from that run's own forces, at the very points the results report, so a design never analyses the structure again. A steel design is made from combinations analysed by the direct analysis method, so the required strengths include second-order effects and K is 1.0.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">What is checked</p><span class="badge badge--free">Free</span></div>
+          <h3>Chapters D to H, clause by clause</h3>
+          <ul class="check-list">
+            <li>Tension (D), compression (E), flexure about both axes (F), shear both ways (G), combined forces and torsion (H)</li>
+            <li>Every ratio with its limit state and its clause; a member's governing check is its largest under any combination</li>
+            <li>Each combination designed by its own basis, so a model may carry LRFD and ASD combinations at once</li>
+            <li>A single angle in an X panel checked as cross bracing (E5)</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Lengths</p><span class="badge badge--free">Free</span></div>
+          <h3>Unbraced lengths found from the structure</h3>
+          <ul class="check-list">
+            <li>A member is held where another member or brace frames in and reaches a support by another way</li>
+            <li>L<sub>cx</sub> and L<sub>cy</sub> across its own local axes, the torsional length, and L<sub>b</sub> segment by segment</li>
+            <li>C<sub>b</sub> by Equation F1-1 from each segment's quarter-point moments; 1.0 out to a free end</li>
+            <li>Any of them stated member by member instead, in the Design Parameters table</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Choosing sections</p><span class="badge badge--free">Free</span></div>
+          <h3>Optimise: the lightest that passes</h3>
+          <ul class="check-list">
+            <li>For each section set marked Optimise, the lightest of its group (every W16 for a W16X26) that passes every check</li>
+            <li>The structure analysed again with what was chosen, until an analysis changes nothing</li>
+            <li>A set that has grown is never made lighter again, so the choice cannot go back and forth</li>
+            <li>Nothing applied until you say so, then as one step you can undo</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Deflection</p><span class="badge badge--free">Free</span></div>
+          <h3>Net deflection, as a beam deflects</h3>
+          <ul class="check-list">
+            <li>Each beam under each service combination that states a limit, L/360 or as you set</li>
+            <li>Measured against the points that hold it, so a settling support or a swaying frame is not counted against the beam</li>
+            <li>A member that fails drawn whole in the colour of its ratio</li>
+            <li>ASCE MOP 113 deflection classes A, B and C for substation structures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Tapered tubes (Pro) ===================== -->
+  <section id="tubes" class="premium-band on-dark" aria-labelledby="tubes-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--premium">Pro</p>
+        <h2 id="tubes-title">Tapered tubular poles, <span class="grad">to ASCE 48-19.</span></h2>
+        <p>A transmission pole's shaft, an H-frame's poles and a davit arm are tapered tubes braked from plate. Strutrix Studio analyses them as the tubes they are and checks them by ASCE/SEI 48-19, or a round tube by AISC 360-22 if you choose.</p>
+      </div>
+      <div class="premium-showcase reveal">
+        <figure class="shot">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Design &middot; Tapered tubes</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/tapered-tubes.svg" width="1200" height="760" loading="lazy" alt="Illustration of an H-frame of two tapered 12-sided poles, a cross-arm and an X-brace carrying three conductors and two ground wires, coloured by utilisation along each tube, beside the ASCE 48-19 checks of its first shaft and the weather cases its loads came from." /></div>
+          </div>
+        </figure>
+        <div>
+          <span class="badge badge--premium">Pro</span>
+          <h3>The tube's own section, at every station.</h3>
+          <ul class="check-list check-list--premium">
+            <li>Round, or a regular polygon of an even number of flats, the diameter varying in a straight line from base to tip</li>
+            <li>Sharp-cornered properties by ASCE 48-19 Appendix B; the analysis in one-foot steps, each the tube's section at its middle</li>
+            <li>Local buckling by Table 5-1, the combined stress at every point of the section with the shear where it acts, tension, bending, shear and torsion, and truss members</li>
+            <li>Under every strength combination analysed second-order, on factored loads, every check citing its equation</li>
+            <li>Generate a pole in shafts with slip joints and davit arms, or an H-frame with its cross-arm and X-brace, wires attached</li>
+            <li>Optimise gives each tube the thinnest plate that passes, keeping its diameters</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Line loading ===================== -->
+  <section id="lines" class="alt-band" aria-labelledby="lines-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Line loading &middot; Free</p>
+        <h2 id="lines-title">The loads a line puts on its structure, by its standard.</h2>
+        <p>From three tables, the weather cases, the wires and each wire's tension in each weather case, the line loading writes the load cases, the loads and the combinations a transmission line puts on a pole, an H-frame or a substation structure. What it writes is ordinary loads you can read, change or delete.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal"><p class="card__kicker">NESC</p><h3>IEEE C2-2023</h3><p>Rule 250B's combined ice and wind districts, Rule 250C's extreme wind and Rule 250D's extreme ice with concurrent wind, by grade of construction.</p></div>
+        <div class="card reveal"><p class="card__kicker">ASCE MOP 74</p><h3>Line structural loading</h3><p>Wind at the speed of the return period chosen, and radial glaze ice with concurrent wind.</p></div>
+        <div class="card reveal"><p class="card__kicker">ASCE MOP 113</p><h3>Substation structures</h3><p>Extreme wind and ice with concurrent wind, combined by Table 3-18 or 3-19, and the deflection loading its classes are checked under.</p></div>
+        <div class="card reveal"><h3>Wires and insulators</h3><p>Conductors and ground wires with their diameters, weights, bundles, spans, line angle and insulators, attached at joints.</p></div>
+        <div class="card reveal"><h3>Wind on the members</h3><p>Each weather case's wind on the structure's own members, by height above the ground, with the exposure and topographic factor.</p></div>
+        <div class="card reveal"><h3>Any yaw</h3><p>The wind's angle to the line from square to along it, and wind both ways reversed through 180 degrees.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Reports and data ===================== -->
+  <section id="data" aria-labelledby="data-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Reports and data</p>
+        <h2 id="data-title">Your structure, in the formats you already use.</h2>
+      </div>
+      <div class="feature-row reveal">
+        <div class="feature-row__text">
+          <p class="feature-row__kicker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+            The calculation report &middot; Free
+          </p>
+          <h3>A report that says how, as well as how much.</h3>
+          <p>One PDF, written from the current run and its steel design and from nothing else: after an edit to anything the analysis reads, it asks you to run again, so a report never describes a structure other than the one analysed.</p>
+          <ul class="check-list">
+            <li>The basis of analysis and design in words, with its clauses, and the standards on the cover</li>
+            <li>The model, the loads, the combinations, each combination's equilibrium and every support's reactions</li>
+            <li>Every member designed, and each member's limit states clause by clause at their worst</li>
+            <li>Letter, Legal or A4, in your units; your firm's name and logo on every page with Pro</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Calculation Report</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/calc-report.svg" width="1200" height="760" loading="lazy" alt="Illustration of two pages of the calculation report: the cover with a firm's name and logo, the project, the model, the standards and the outcome, and a page of the steel design listing each member's section, ratio, governing check and combination, with one member's checks clause by clause." /></div>
+          </div>
+        </figure>
+      </div>
+      <div class="card-grid mt-xl">
+        <div class="card reveal"><span class="badge badge--premium">Pro</span><h3>IFC 4.3 and Revit</h3><p>Every member as its true steel profile at its centre line, with its properties, quantities and design result; into Revit as structural columns and framing through the Ramisoft Revit add-in.</p></div>
+        <div class="card reveal"><span class="badge badge--free">Free</span><h3>Tables like a spreadsheet</h3><p>Joints, supports, members, sections, materials, loads and combinations as sheets that sort, filter, paste and copy; an object's properties are its rows.</p></div>
+        <div class="card reveal"><span class="badge badge--free">Free</span><h3>Plain-text models</h3><p>One <code>.strx</code> file per model, readable and easy to keep under version control or send to a reviewer.</p></div>
+        <div class="card reveal"><span class="badge badge--free">Free</span><h3>Units, formulas, undo</h3><p>Imperial or metric at any time; a formula after <code>=</code> in any number field and lengths in feet and inches; undo that reaches back past a save.</p></div>
+        <div class="card reveal"><span class="badge badge--free">Free</span><h3>The manual, built in</h3><p>Help &gt; User's Manual opens the whole methodology beside your work: every assumption, method, equation and check, and the limits of version 1.</p></div>
+        <div class="card reveal"><span class="badge badge--free">Free</span><h3>Settings that stay</h3><p>How the model is drawn, its colours by member type, the deformed shape's magnification, the editing tolerances and the report's paper, for every model.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Cloud ===================== -->
+  <section id="cloud" class="alt-band" aria-labelledby="cloud-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Cloud</p>
+        <h2 id="cloud-title">Optional, never required.</h2>
+        <p>Local model files are the default and work offline without an account. Sign in when you want your structures on any computer, in the same jobs as your foundations and piles.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal"><span class="badge badge--account">Free account</span><h3>Cloud jobs</h3><p>Save a structure to a job with a searchable description, and open it on any computer you sign in on. A job may hold structures, foundation models and pile designs side by side.</p></div>
+        <div class="card reveal"><span class="badge badge--account">Free account</span><h3>Version history</h3><p>Every save is a version with who saved it and why; restore any of them as a new version, so a restore can itself be undone.</p></div>
+        <div class="card reveal"><span class="badge badge--account">Free account</span><h3>Recycle bin and check-out</h3><p>Deleted designs wait thirty days where you can restore them; in a job shared with your organization, a model is checked out to whoever has it open.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== The structure link ===================== -->
+  <section id="link" aria-labelledby="link-title">
+    <div class="container">
+      <div class="assistant reveal">
+        <div class="assistant__text">
+          <p class="eyebrow">Pro &middot; The structure link</p>
+          <h2 id="link-title">Reactions handed to your foundations, live.</h2>
+          <p>A save after a run carries each support's reactions under each basic case and each combination solved. FoundaTrix Studio and PileAxis, in the same job, read them as their loads, always from the latest saved version, and keep no copy.</p>
+          <ul class="check-list">
+            <li>FoundaTrix Studio: each support's reactions by basic case, grouped by category and combined by its own foundation combinations, or your combinations as they are; and a footing placed at each support</li>
+            <li>PileAxis: one support's reactions, under a combination or a basic case, as the loads at a pile's head</li>
+            <li>Each analysis there records the version it read, and says so when the structure has changed since</li>
+            <li>A structure changed since its run is saved without reactions, so nothing ever reads reactions of another model</li>
+          </ul>
+          <p class="assistant__note">Reading a structure is a Pro feature of FoundaTrix Studio and PileAxis and needs a Strutrix Studio subscription or trial as well.</p>
+        </div>
+        <figure class="assistant__art">
+          <img src="/images/screens/structure-link.svg" width="1200" height="760" loading="lazy" alt="Illustration: a steel frame analysed in Strutrix Studio and saved with its support reactions to the cloud; FoundaTrix Studio reads them as the loads on a footing at each support, and PileAxis reads one support's reactions as the loads at a pile's head, always from the latest saved version." />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Your own AI assistant ===================== -->
+  <section id="connect" class="assistant-band on-dark" aria-labelledby="connect-title">
+    <div class="container">
+      <div class="assistant assistant--flip reveal">
+        <figure class="assistant__art">
+          <img src="/images/assistant-frame.svg" width="1200" height="760" loading="lazy" alt="Illustration: an engineer asks an AI assistant for a three-storey braced steel frame in a cloud job; the assistant reads the model type's schema, asks for the floor and roof loads the engineer had not given, checks the model and creates it, unrun, in the job beside the job's pile and foundation designs." />
+        </figure>
+        <div class="assistant__text">
+          <p class="eyebrow">Your own AI assistant</p>
+          <h2 id="connect-title">A building frame from a few sentences.</h2>
+          <p>Connect an AI assistant that accepts custom MCP connectors to your RamisoftSolutions account and tell it the bays, the storeys, the sections, the steel, the bases and the floor and roof loads. It creates the frame in your job with the program's own generators and checks.</p>
+          <ul class="check-list">
+            <li>A column at every grid point, beams both ways at every level, the end bays braced if asked</li>
+            <li>A dead case carrying the members' own weight, live and roof live cases, each level's load as one two-way area load</li>
+            <li>The combinations generated, and the beams' deflection limits on the service combinations</li>
+            <li>Saved unrun, in your name; a value you did not give is asked for, never invented</li>
+            <li>It also searches this program's user's manual, and finds your structures by what they hold</li>
+          </ul>
+          <p class="assistant__note">How to connect your assistant is explained in the program's user's manual. It works as you, with your own account; how it read what you gave it is its reading, so check the model as you would a colleague's. A search by what a structure holds needs Pro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Limits ===================== -->
+  <section id="limits" aria-labelledby="limits-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Limits</p>
+        <h2 id="limits-title">What version 1 does not do, said plainly.</h2>
+        <p>So you know what still needs doing elsewhere. The user's manual lists every assumption and every limit.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>Members only</h3>
+          <p>No plates, walls or solids. A floor or a wall is represented by the loads it delivers to the members.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Static and elastic</h3>
+          <p>No modal, response-spectrum or time-history analysis, and no material nonlinearity: members are linearly elastic, with small displacements.</p>
+        </div>
+        <div class="card reveal">
+          <h3>No building wind or seismic generators</h3>
+          <p>Wind and earthquake load cases on a building are entered as loads; the line loading writes a line's wind on its wires and structure.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Direct analysis for design</h3>
+          <p>The amplified first-order method of Appendix 8 is not offered: a strength combination analysed to first order is not designed, and the program says so.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Steel members only</h3>
+          <p>No concrete, wood, cold-formed steel or aluminium design, and no connection or base plate design.</p>
+        </div>
+        <div class="card reveal">
+          <h3>No sag-tension</h3>
+          <p>A wire's tensions are the line designer's. No guys, broken-wire or construction cases, and no lattice towers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Validation ===================== -->
+  <section id="validation" class="alt-band" aria-labelledby="validation-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Validation</p>
+        <h2 id="validation-title">Pinned to answers it did not write.</h2>
+        <p>Every result is held to an independent answer, a closed form, a published benchmark or a worked example, by an automated test, never to the program's own earlier output alone.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal"><p class="card__kicker">AISC Commentary</p><h3>Second-order benchmarks</h3><p>The second-order analysis reproduces the Specification Commentary's benchmark problems for a cantilever column and a pinned column under axial load and lateral load.</p></div>
+        <div class="card reveal"><p class="card__kicker">AISC Design Examples</p><h3>Member strengths</h3><p>Checks against the Design Examples' LRFD and ASD columns: a W18X50 braced at its third points gives &phi;M<sub>n</sub> of about 307 kip-ft where the example, rounding C<sub>b</sub>, prints 305.</p></div>
+        <div class="card reveal"><p class="card__kicker">Closed form</p><h3>Supports and releases</h3><p>A fixed-ended beam whose support settles carries 12EI&Delta;/L&sup3; and 6EI&Delta;/L&sup2;; one that turns, 4EI&theta;/L and 2EI&theta;/L; a determinate one tilts and carries nothing.</p></div>
+        <div class="card reveal"><p class="card__kicker">Statics</p><h3>Equilibrium, every time</h3><p>Every combination's reactions balance its loads within a millionth of their size, and a printed report's reactions are held to the loads its factors put on the frame, worked by hand.</p></div>
+        <div class="card reveal"><p class="card__kicker">ASCE 48-19</p><h3>Tube properties</h3><p>The closed forms of Appendix B held to an independent integration of the outlines, and to every round HSS of the AISC database.</p></div>
+        <div class="card reveal"><p class="card__kicker">Citations</p><h3>Every check names its clause</h3><p>A design check written without the clause it comes from fails a test, so every ratio you read can be traced to the page.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== References ===================== -->
+  <section id="references" class="section--tight" aria-labelledby="references-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">References</p>
+        <h2 id="references-title">The documents behind the checks.</h2>
+      </div>
+      <ol class="refs reveal">
+        <li>ANSI/AISC 360-22 (2022). <em>Specification for Structural Steel Buildings.</em> American Institute of Steel Construction.</li>
+        <li>AISC (2023). <em>Steel Construction Manual</em>, 16th ed., and the AISC Shapes Database, version 16.0.</li>
+        <li>AISC Design Guide 28. <em>Stability Design of Steel Buildings.</em></li>
+        <li>ASCE/SEI 7-22 (2022). <em>Minimum Design Loads and Associated Criteria for Buildings and Other Structures.</em> American Society of Civil Engineers.</li>
+        <li>ASCE/SEI 48-19 (2019). <em>Design of Steel Transmission Pole Structures.</em> American Society of Civil Engineers.</li>
+        <li>ASCE (2020). <em>Electrical Transmission Line Structural Loading</em>, Manual of Practice No. 74, 4th ed.</li>
+        <li>ASCE (2023). <em>Substation Structure Design Guide</em>, Manual of Practice No. 113, 2nd ed.</li>
+        <li>IEEE C2-2023. <em>National Electrical Safety Code.</em> Institute of Electrical and Electronics Engineers.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="closing-title">
+    <div class="container closing reveal">
+      <h2 id="closing-title">Run a frame you already know the answer to.</h2>
+      <p>When Strutrix Studio arrives in the Microsoft Store, download it free, with no account, and check it against a case you trust. Then sign in to try the Pro features free.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href="/#download">Coming soon</a>
+        <a class="btn btn--ghost btn--lg" href="/pricing/">Compare plans</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/" aria-label="Strutrix Studio home">
+          <img class="brand__mark" src="/images/strutrix-mark.svg" alt="" width="34" height="34" />
+          <span class="brand__name">Strutrix <span>Studio</span></span>
+        </a>
+        <p>Structural analysis and steel design of three-dimensional frames, for Windows. A RamisoftSolutions product.</p>
+        <p class="sibling">Also from RamisoftSolutions: <a href="https://www.foundatrix.com/" target="_blank" rel="noopener">FoundaTrix Studio</a>, analysis and design of rigid foundations of any shape, and <a href="https://www.pileaxis.com/" target="_blank" rel="noopener">PileAxis</a>, lateral and axial pile analysis. One account signs in to all three.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/#pro">Pro</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/#download">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="/support/">Help and contact</a></li>
+          <li><a href="https://github.com/CoolRamin/Strutrix-site/issues/new?template=bug_report.yml" target="_blank" rel="noopener">Report a bug</a></li>
+          <li><a href="https://github.com/CoolRamin/Strutrix-site/issues/new?template=feature_request.yml" target="_blank" rel="noopener">Request a feature</a></li>
+          <li><a href="mailto:admin@ramisoftsolutions.com">Email us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 RamisoftSolutions &middot; Built and maintained in California, United States</span>
+      <div class="footer__social">
+        <a class="icon-btn" href="https://github.com/CoolRamin/Strutrix-site" target="_blank" rel="noopener" aria-label="Strutrix Studio on GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/company/ramisoftsolutions/" target="_blank" rel="noopener" aria-label="RamisoftSolutions on LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+</body>
+</html>
