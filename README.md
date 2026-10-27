@@ -108,7 +108,7 @@ menu builds) are illustrations.
 | Microsoft Store link | `src/index.html`, `#download`; every "Coming soon" button goes to `/#download` | Not listed yet. The panel shows a "Coming soon" badge and the Store button as a non-link (`.store-btn--soon`). When the listing is live: make the button an `<a class="store-btn" href="https://apps.microsoft.com/detail/<Store ID>">` (as the sister sites do), change the badge and the buttons' "Coming soon" to "Download free", and the announce bar to the listing |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
 | The structure link and the assistant connector | Home `#link`, `#connect`; Features `#link`, `#connect` | Advertised as the program's manual describes them; check they are open to customers in all three programs on launch day |
-| Hosting and domain | `.github/workflows/deploy.yml`, canonical links, `robots.txt`, `sitemap.xml` | Written for **Azure Static Web Apps** and `https://www.strutrix.com`. The workflow deploys nothing until the repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN` is set |
+| Custom domains | GoDaddy DNS for `strutrix.com`; the Static Web App's custom domains | The app is live on its Azure address since 2026-10-26 (see [Deployment](#deployment)); `www.strutrix.com` and `strutrix.com` wait for the DNS records listed there |
 
 The privacy policy and terms of use follow the sister programs' (www.foundatrix.com/privacy, www.pileaxis.com/privacy),
 adapted to what Strutrix Studio does (effective October 26, 2026). When the program's Store folder gains its own
@@ -127,15 +127,22 @@ then open `http://localhost:8080/`.
 
 ## Deployment
 
-The site is meant for **Azure Static Web Apps** (Free plan), as its sister sites are. Every push to `main` runs
-`.github/workflows/deploy.yml`, which publishes `src/` once the repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN` (the
-app's deployment token) is set, and reports that it deployed nothing until then. Pull requests are not deployed.
-`src/staticwebapp.config.json` sets trailing slashes, the 404 page and the security headers, including a content
-security policy.
+The site is hosted on **Azure Static Web Apps** (Free plan), as its sister sites are: the app `swa-strutrix-site` in the
+resource group `rg-lateralpile`, region West US 2 (tags `product: Strutrix Studio`, `purpose: website`), default host
+`black-pebble-0c68c441e.6.azurestaticapps.net`, stable inbound IP `20.29.155.69`. Every push to `main` publishes `src/`
+through `.github/workflows/deploy.yml`, which authenticates with the repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN`
+(the app's deployment token, set 2026-10-26; without it the job deploys nothing and says so). Pull requests are not
+deployed. `src/staticwebapp.config.json` sets trailing slashes, the 404 page and the security headers, including a content
+security policy. If the deployment token is ever rotated in Azure, set the repository secret again.
 
-The canonical address is `https://www.strutrix.com`: the canonical links, `og:url`, `robots.txt` and `sitemap.xml` all
-name it. To go live: create the Static Web App, set the secret, add `www.strutrix.com` (CNAME) and the apex (TXT
-validation, then an A record to the app's stable inbound IP) as custom domains, and make `www` the default.
+| Address | DNS at GoDaddy | Role |
+|---|---|---|
+| `https://www.strutrix.com` | `CNAME www` to `black-pebble-0c68c441e.6.azurestaticapps.net` (validated by the CNAME itself) | Primary (canonical) address |
+| `https://strutrix.com` | `TXT @` with the app's validation token, and `A @` to `20.29.155.69` (the domain's parked A records removed) | Redirects to `www` once `www` is the default domain |
+| `black-pebble-0c68c441e.6.azurestaticapps.net` | (Azure's own) | Redirects to `www` once `www` is the default domain |
+
+`www` is made the default domain in the Azure portal (the app's Custom domains page, "Set default"), which has no CLI
+command. The canonical links, `og:url`, `robots.txt` and `sitemap.xml` all name `https://www.strutrix.com`.
 
 ## Contributing
 
