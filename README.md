@@ -108,7 +108,7 @@ menu builds) are illustrations.
 | Microsoft Store link | `src/index.html`, `#download`; every "Coming soon" button goes to `/#download` | Not listed yet. The panel shows a "Coming soon" badge and the Store button as a non-link (`.store-btn--soon`). When the listing is live: make the button an `<a class="store-btn" href="https://apps.microsoft.com/detail/<Store ID>">` (as the sister sites do), change the badge and the buttons' "Coming soon" to "Download free", and the announce bar to the listing |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
 | The structure link and the assistant connector | Home `#link`, `#connect`; Features `#link`, `#connect` | Advertised as the program's manual describes them; check they are open to customers in all three programs on launch day |
-| Custom domains | GoDaddy DNS for `strutrix.com`; the Static Web App's custom domains | The app is live on its Azure address since 2026-10-26 (see [Deployment](#deployment)); `www.strutrix.com` and `strutrix.com` wait for the DNS records listed there |
+| Default domain | The Static Web App's Custom domains page in the Azure portal | `www.strutrix.com` and `strutrix.com` are connected and serve the site (2026-10-26); `www` is still to be set as the default, after which the apex and the Azure address redirect to it |
 
 The privacy policy and terms of use follow the sister programs' (www.foundatrix.com/privacy, www.pileaxis.com/privacy),
 adapted to what Strutrix Studio does (effective October 26, 2026). When the program's Store folder gains its own
@@ -137,8 +137,8 @@ security policy. If the deployment token is ever rotated in Azure, set the repos
 
 | Address | DNS at GoDaddy | Role |
 |---|---|---|
-| `https://www.strutrix.com` | `CNAME www` to `black-pebble-0c68c441e.6.azurestaticapps.net` (validated by the CNAME itself) | Primary (canonical) address |
-| `https://strutrix.com` | `TXT @` with the app's validation token, and `A @` to `20.29.155.69` (the domain's parked A records removed) | Redirects to `www` once `www` is the default domain |
+| `https://www.strutrix.com` | `CNAME www` to `black-pebble-0c68c441e.6.azurestaticapps.net` (validated by the CNAME itself) | Primary (canonical) address; Ready, its certificate issued, 2026-10-26 |
+| `https://strutrix.com` | `TXT @` with the app's validation token, and `A @` to `20.29.155.69` (the domain's parked A record replaced) | Ready 2026-10-26; redirects to `www` once `www` is the default domain |
 | `black-pebble-0c68c441e.6.azurestaticapps.net` | (Azure's own) | Redirects to `www` once `www` is the default domain |
 
 `www` is made the default domain in the Azure portal (the app's Custom domains page, "Set default"), which has no CLI
