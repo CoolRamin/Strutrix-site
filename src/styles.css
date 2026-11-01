@@ -1,6 +1,6 @@
-/* Strutrix Studio website: hand-written CSS, no framework, no build step.
+/* StruTrix Studio website: hand-written CSS, no framework, no build step.
    The design system is the Ramisoft family's (navy hero, teal accent, white cards), the same file as
-   FoundaTrix Studio's and PileAxis's sites so the three product sites read as one family; the lavender and
+   FoundaTrix Studio's and PileTrix Studio's sites so the three product sites read as one family; the lavender and
    magenta come from the family's marks and mark what is Pro. Changes to the shared rules belong in all three. */
 
 :root {
@@ -2768,7 +2768,7 @@ section {
   }
 }
 
-/* ---------- Strutrix Studio additions (the rules above are the family's shared file, unchanged) ---------- */
+/* ---------- StruTrix Studio additions (the rules above are the family's shared file, unchanged) ---------- */
 
 /* Six frame generators in two rows of three; two across on a phone. */
 .types--3 {

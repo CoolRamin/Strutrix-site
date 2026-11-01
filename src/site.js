@@ -1,4 +1,4 @@
-/* Strutrix Studio website (shared with the FoundaTrix Studio and PileAxis sites): the little behaviour the pages share. No dependencies.
+/* StruTrix Studio website (shared with the FoundaTrix Studio and PileTrix Studio sites): the little behaviour the pages share. No dependencies.
    Everything here is an enhancement: with scripts off, every page reads and navigates the same. */
 (function () {
   'use strict';
