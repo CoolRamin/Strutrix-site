@@ -105,7 +105,7 @@ menu builds) are illustrations.
 
 | What | Where | Now |
 |---|---|---|
-| Microsoft Store link | `src/index.html`, `#download`; every "Coming soon" button goes to `/#download` | Not listed yet. The panel shows a "Coming soon" badge and the Store button as a non-link (`.store-btn--soon`). When the listing is live: make the button an `<a class="store-btn" href="https://apps.microsoft.com/detail/<Store ID>">` (as the sister sites do), change the badge and the buttons' "Coming soon" to "Download free", and the announce bar to the listing |
+| Microsoft Store link | `src/index.html`, `#download`; every "Download free" button goes to `/#download` | Listed since 2026-11-01 (Store ID 9PM7B70ZXWRC): the panel's button, the announce bar and the pricing FAQ link to https://apps.microsoft.com/detail/9PM7B70ZXWRC; every "Download free" button goes to `/#download`. `.store-btn--soon` and `.badge--soon` stay in the stylesheet unused |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
 | The structure link and the assistant connector | Home `#link`, `#connect`; Features `#link`, `#connect` | Advertised as the program's manual describes them; check they are open to customers in all three programs on launch day |
 
