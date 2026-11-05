@@ -31,7 +31,7 @@ source: no engine code, no model files, no cloud configuration, no build output 
 
 | Path | File | What it is |
 |---|---|---|
-| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, the structure link, your AI assistant, plans, download, support |
+| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, the structure link, your AI assistant, what is coming soon, plans, download, support |
 | `/features/` | `src/features/index.html` | The engineering in detail: the model, loads, combinations, analysis, results, steel design, tapered tubes, line loading, data, cloud, the link, limits, validation, references |
 | `/pricing/` | `src/pricing/index.html` | Free, signed in, and Pro, with a comparison table and questions |
 | `/support/` | `src/support/index.html` | Where to report a bug, ask for a feature or write privately |

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280"><title>An existing frame sagged under its dead load, and an addition built onto it as it stands</title>
+<line x1="20" y1="241" x2="500" y2="241" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+<g stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.85"><path d="M70 92H220"/><path d="M70 160H220"/></g>
+<g stroke="#59A6A2" stroke-width="2" fill="none" stroke-linecap="round"><path d="M90 62H200"/><path d="M90 62V85.7"/><path d="M117.5 62V88.9"/><path d="M145 62V90"/><path d="M172.5 62V88.9"/><path d="M200 62V85.7"/></g>
+<g fill="#59A6A2"><polygon points="86,84.7 94,84.7 90,91.7"/><polygon points="113.5,87.9 121.5,87.9 117.5,94.9"/><polygon points="141,89 149,89 145,96"/><polygon points="168.5,87.9 176.5,87.9 172.5,94.9"/><polygon points="196,84.7 204,84.7 200,91.7"/></g>
+<g stroke="#F58BBB" stroke-width="2" fill="none" stroke-linecap="round"><path d="M240 62H370"/><path d="M240 62V81"/><path d="M272.5 62V81"/><path d="M305 62V81"/><path d="M337.5 62V81"/><path d="M370 62V81"/></g>
+<g fill="#F58BBB"><polygon points="236,80 244,80 240,87"/><polygon points="268.5,80 276.5,80 272.5,87"/><polygon points="301,80 309,80 305,87"/><polygon points="333.5,80 341.5,80 337.5,87"/><polygon points="366,80 374,80 370,87"/></g>
+<g stroke="#F0388F" stroke-linecap="round" fill="none"><path d="M220 228L390 160" stroke-width="4"/><path d="M220 160L390 92" stroke-width="4"/><path d="M220 160H390" stroke-width="6"/><path d="M220 92H390" stroke-width="6"/><path d="M390 228V92" stroke-width="6"/><path d="M145 228V168" stroke-width="6"/></g>
+<g stroke="#3B9F9A" stroke-width="6" stroke-linecap="round" fill="none"><path d="M70 228V92"/><path d="M220 228V92"/><path d="M70 160Q145 176 220 160"/><path d="M70 92Q145 108 220 92"/></g>
+<g stroke="#8F7EE6" stroke-width="3" stroke-linecap="round" fill="none"><path d="M18 92H52"/><path d="M26 160H52"/></g>
+<g fill="#8F7EE6"><polygon points="62,92 52,86.5 52,97.5"/><polygon points="62,160 52,154.5 52,165.5"/></g>
+<g fill="#3B9F9A"><polygon points="70,229 61,240 79,240"/><polygon points="220,229 211,240 229,240"/></g>
+<g fill="#F0388F"><polygon points="145,229 136,240 154,240"/><polygon points="390,229 381,240 399,240"/></g>
+<rect x="70" y="14" width="150" height="24" rx="12" fill="#0F766E"/>
+<text x="145" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Stage 0 · Existing</text>
+<rect x="230" y="14" width="150" height="24" rx="12" fill="#BE185D"/>
+<text x="305" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Stage 1 · Addition</text>
+<rect x="28" y="251" width="234" height="22" rx="11" fill="#334155"/>
+<text x="145" y="266" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">New column fitted to the sagged beam</text>
+<rect x="272" y="251" width="236" height="22" rx="11" fill="#334155"/>
+<text x="390" y="266" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">Later loads carried by the whole frame</text>
+</svg>
