@@ -2818,7 +2818,8 @@ section {
   color: #fbbf24;
 }
 
-/* Coming soon: two features side by side, one above the other below 900px. The art sits on .type-card__art's backdrop. */
+/* Coming soon: two features side by side, one above the other below 900px. The art sits on .type-card__art's backdrop.
+   An odd last card stands alone, centred at a column's width. */
 .soon-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2826,9 +2827,19 @@ section {
   align-items: start;
 }
 
+.soon-grid > .soon-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 12px);
+}
+
 @media (max-width: 900px) {
   .soon-grid {
     grid-template-columns: 1fr;
+  }
+  .soon-grid > .soon-card:last-child:nth-child(odd) {
+    width: auto;
+    justify-self: stretch;
   }
 }
 

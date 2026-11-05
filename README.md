@@ -31,8 +31,8 @@ source: no engine code, no model files, no cloud configuration, no build output 
 
 | Path | File | What it is |
 |---|---|---|
-| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, the structure link, your AI assistant, what is coming soon, plans, download, support |
-| `/features/` | `src/features/index.html` | The engineering in detail: the model, loads, combinations, analysis, results, steel design, tapered tubes, line loading, data, cloud, the link, limits, validation, references |
+| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, what is coming soon (the structure link among it), your AI assistant, plans, download, support |
+| `/features/` | `src/features/index.html` | The engineering in detail: the model, loads, combinations, analysis, results, steel design, tapered tubes, line loading, data, cloud, the AI assistant, limits, validation, references |
 | `/pricing/` | `src/pricing/index.html` | Free, signed in, and Pro, with a comparison table and questions |
 | `/support/` | `src/support/index.html` | Where to report a bug, ask for a feature or write privately |
 | `/privacy/` | `src/privacy/index.html` | Privacy policy |
@@ -86,7 +86,7 @@ frame whose bar stands in for the window's caption. Replace each with a real cap
 | `src/images/screens/calc-report.svg` | Features `#data` | Two pages of the calculation report on the app's background (never a PDF reader's window) |
 
 Not screenshots to replace: `src/images/screens/structure-link.svg` (a diagram of the link: a frame's reactions read by
-FoundaTrix Studio and PileTrix Studio) and `src/images/assistant-frame.svg` (a generic assistant conversation, deliberately not
+FoundaTrix Studio and PileTrix Studio; unused while the link is in Coming soon, kept for its return to Home `#link`) and `src/images/assistant-frame.svg` (a generic assistant conversation, deliberately not
 any one assistant's interface, creating a building frame through the connector with the tool names the endpoint really
 exposes, in the fictional job "Sample Distribution Centre").
 
@@ -107,7 +107,8 @@ menu builds) are illustrations.
 |---|---|---|
 | Microsoft Store link | `src/index.html`, `#download`; every "Download free" button goes to `/#download` | Listed since 2026-11-01 (Store ID 9PM7B70ZXWRC): the panel's button, the announce bar and the pricing FAQ link to https://apps.microsoft.com/detail/9PM7B70ZXWRC; every "Download free" button goes to `/#download`. `.store-btn--soon` and `.badge--soon` stay in the stylesheet unused |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
-| The structure link and the assistant connector | Home `#link`, `#connect`; Features `#link`, `#connect` | Advertised as the program's manual describes them; check they are open to customers in all three programs on launch day |
+| The structure link | Home `#soon` (its card is `#link`, art `src/images/soon/structure-link.svg`), `#pro`, `#plans`; `/pricing/` | In Coming soon since 2026-11-05 ("In testing", Pro): FoundaTrix Studio and PileTrix Studio still read a structure for administrators alone (LateralPile issue 87). When it opens to customers, bring back the Home and Features `#link` sections (git history before that date, with issue 87's corrections), the Features nav entry and the trial step on `/pricing/`, and take "(coming soon)" off the plans and the comparison row |
+| The assistant connector | Home `#connect`; Features `#connect` | Advertised as the program's manual describes it |
 
 The privacy policy and terms of use follow the sister programs' (www.foundatrix.com/privacy, www.piletrix.com/privacy),
 adapted to what StruTrix Studio does (effective October 26, 2026). When the program's Store folder gains its own

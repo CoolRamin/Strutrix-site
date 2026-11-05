@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280"><title>A braced steel frame's support reactions carried through the cloud job to a footing and to the head of a pile</title>
+<line x1="20" y1="232" x2="206" y2="232" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+<g stroke="#59A6A2" stroke-width="4" stroke-linecap="round" fill="none"><path d="M52 220L168 152"/><path d="M52 152L168 220"/></g>
+<g stroke="#3B9F9A" stroke-width="6" stroke-linecap="round" fill="none"><path d="M52 220V84"/><path d="M168 220V84"/><path d="M52 152H168"/><path d="M52 84H168"/></g>
+<g fill="#3B9F9A"><polygon points="52,221 43,232 61,232"/><polygon points="168,221 159,232 177,232"/></g>
+<g stroke="#8F7EE6" stroke-width="2.5" stroke-linecap="round" fill="none"><path d="M52 262V244"/><path d="M168 262V244"/></g>
+<g fill="#8F7EE6"><polygon points="52,236 46.5,246 57.5,246"/><polygon points="168,236 162.5,246 173.5,246"/></g>
+<g stroke="#8F7EE6" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round" fill="none"><path d="M180 196C200 196 206 166 222 160"/><path d="M302 136C320 124 324 96 342 92"/><path d="M302 152C322 166 324 198 342 202"/></g>
+<g fill="#8F7EE6"><polygon points="230,157 220,154.5 223,164.5"/><polygon points="350,92 341,86.5 341,97.5"/><polygon points="350,202 341,196.5 341,207.5"/></g>
+<path d="M236 168H292C305 168 312 158 309 148C306 139 297 135 290 137C289 124 278 115 265 116C253 117 246 125 244 134C234 133 226 140 226 150C226 161 230 168 236 168Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2" stroke-linejoin="round"/>
+<text x="267" y="148" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#334155">Cloud</text>
+<text x="267" y="161" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#64748B">same job</text>
+<g stroke="#94A3B8" stroke-width="1.5" fill="#CBD5E1"><rect x="365" y="104" width="120" height="22" rx="2"/><rect x="411" y="74" width="28" height="30" rx="1"/></g>
+<line x1="356" y1="96" x2="494" y2="96" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<g stroke="#F0388F" stroke-width="3" stroke-linecap="round" fill="none"><path d="M425 46V64"/><path d="M386 82H402"/></g>
+<g fill="#F0388F"><polygon points="425,72 419.5,62 430.5,62"/><polygon points="410,82 400,76.5 400,87.5"/></g>
+<g stroke="none"><rect x="356" y="182" width="140" height="22" fill="#EFE6D6"/><rect x="356" y="204" width="140" height="22" fill="#E6D9C2"/><rect x="356" y="226" width="140" height="18" fill="#DCCCB0"/></g>
+<rect x="420" y="176" width="12" height="72" fill="#C4B8FF" stroke="#8F7EE6" stroke-width="1.5"/>
+<rect x="412" y="170" width="28" height="8" rx="1" fill="#8F7EE6"/>
+<g stroke="#F0388F" stroke-width="3" stroke-linecap="round" fill="none"><path d="M426 140V158"/><path d="M386 174H400"/><path d="M446 158A14 14 0 0 1 452 176"/></g>
+<g fill="#F0388F"><polygon points="426,166 420.5,156 431.5,156"/><polygon points="408,174 398,168.5 398,179.5"/><polygon points="451,183 446.5,173.5 456.5,175"/></g>
+<rect x="40" y="14" width="140" height="24" rx="12" fill="#0F766E"/>
+<text x="110" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">StruTrix Studio</text>
+<rect x="355" y="14" width="140" height="24" rx="12" fill="#BE185D"/>
+<text x="425" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">FoundaTrix Studio</text>
+<rect x="196" y="251" width="146" height="22" rx="11" fill="#334155"/>
+<text x="269" y="266" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">The latest saved version</text>
+<rect x="355" y="251" width="140" height="22" rx="11" fill="#BE185D"/>
+<text x="425" y="266" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF">PileTrix Studio</text>
+</svg>
