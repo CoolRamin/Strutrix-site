@@ -31,7 +31,7 @@ source: no engine code, no model files, no cloud configuration, no build output 
 
 | Path | File | What it is |
 |---|---|---|
-| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, what is coming soon (the structure link among it), your AI assistant, plans, download, support |
+| `/` | `src/index.html` | Home: what the program does, the frames it generates, the free analysis and design, Pro, what is coming soon (the structure link and multi-storey buildings among it), your AI assistant, plans, download, support |
 | `/features/` | `src/features/index.html` | The engineering in detail: the model, loads, combinations, analysis, results, steel design, tapered tubes, line loading, data, cloud, the AI assistant, limits, validation, references |
 | `/pricing/` | `src/pricing/index.html` | Free, signed in, and Pro, with a comparison table and questions |
 | `/support/` | `src/support/index.html` | Where to report a bug, ask for a feature or write privately |
@@ -108,6 +108,7 @@ menu builds) are illustrations.
 | Microsoft Store link | `src/index.html`, `#download`; every "Download free" button goes to `/#download` | Listed since 2026-11-01 (Store ID 9PM7B70ZXWRC): the panel's button, the announce bar and the pricing FAQ link to https://apps.microsoft.com/detail/9PM7B70ZXWRC; every "Download free" button goes to `/#download`. `.store-btn--soon` and `.badge--soon` stay in the stylesheet unused |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
 | The structure link | Home `#soon` (its card is `#link`, art `src/images/soon/structure-link.svg`), `#pro`, `#plans`; `/pricing/` | In Coming soon since 2026-11-05 ("In testing", Pro): FoundaTrix Studio and PileTrix Studio still read a structure for administrators alone (LateralPile issue 87). When it opens to customers, bring back the Home and Features `#link` sections (git history before that date, with issue 87's corrections), the Features nav entry and the trial step on `/pricing/`, and take "(coming soon)" off the plans and the comparison row |
+| Multi-storey buildings from typical floors | Home `#soon` (its card is `#building`, art `src/images/soon/building-modeler.svg`), `#plans`; `/pricing/` (the Signed in plan and the comparison's Modelling and loads row) | In Coming soon since 2026-11-07 ("Planned", Free account): the plan is approved (LateralPile issue 90) and not started. A free feature for a signed-in engineer; a building still in the modeller is saved to the cloud only. When it ships, move it into the Features page and the Home features, and take "(coming soon)" off the Signed in plan and the comparison row |
 | The assistant connector | Home `#connect`; Features `#connect` | Advertised as the program's manual describes it |
 
 The privacy policy and terms of use follow the sister programs' (www.foundatrix.com/privacy, www.piletrix.com/privacy),

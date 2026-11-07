@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280"><title>A typical floor drawn once in plan, and the building stacked from it storey by storey</title>
+<rect x="35" y="72" width="180" height="120" fill="#8F7EE6" fill-opacity="0.16"/>
+<line x1="35" y1="64" x2="35" y2="204" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="35" cy="56" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="35" y="59.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">A</text>
+<line x1="95" y1="64" x2="95" y2="204" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="95" cy="56" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="95" y="59.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">B</text>
+<line x1="155" y1="64" x2="155" y2="204" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="155" cy="56" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="155" y="59.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">C</text>
+<line x1="215" y1="64" x2="215" y2="204" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="215" cy="56" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="215" y="59.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">D</text>
+<line x1="25" y1="192" x2="222" y2="192" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="17" cy="192" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="17" y="195.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">1</text>
+<line x1="25" y1="132" x2="222" y2="132" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="17" cy="132" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="17" y="135.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">2</text>
+<line x1="25" y1="72" x2="222" y2="72" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<circle cx="17" cy="72" r="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.4"/>
+<text x="17" y="75.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="700" fill="#334155">3</text>
+<line x1="65" y1="72" x2="65" y2="192" stroke="#3B9F9A" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+<line x1="125" y1="72" x2="125" y2="192" stroke="#3B9F9A" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+<line x1="185" y1="72" x2="185" y2="192" stroke="#3B9F9A" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+<line x1="35" y1="192" x2="215" y2="192" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="35" y1="132" x2="215" y2="132" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="35" y1="72" x2="215" y2="72" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="35" y1="72" x2="35" y2="192" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="95" y1="72" x2="95" y2="192" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="155" y1="72" x2="155" y2="192" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="215" y1="72" x2="215" y2="192" stroke="#3B9F9A" stroke-width="3" stroke-linecap="round"/>
+<line x1="95" y1="192" x2="155" y2="192" stroke="#F0388F" stroke-width="5" stroke-linecap="round"/>
+<line x1="215" y1="192" x2="215" y2="132" stroke="#F0388F" stroke-width="5" stroke-linecap="round"/>
+<rect x="30.5" y="187.5" width="9" height="9" fill="#0F766E"/>
+<rect x="30.5" y="127.5" width="9" height="9" fill="#0F766E"/>
+<rect x="30.5" y="67.5" width="9" height="9" fill="#0F766E"/>
+<rect x="90.5" y="187.5" width="9" height="9" fill="#0F766E"/>
+<rect x="90.5" y="127.5" width="9" height="9" fill="#0F766E"/>
+<rect x="90.5" y="67.5" width="9" height="9" fill="#0F766E"/>
+<rect x="150.5" y="187.5" width="9" height="9" fill="#0F766E"/>
+<rect x="150.5" y="127.5" width="9" height="9" fill="#0F766E"/>
+<rect x="150.5" y="67.5" width="9" height="9" fill="#0F766E"/>
+<rect x="210.5" y="187.5" width="9" height="9" fill="#0F766E"/>
+<rect x="210.5" y="127.5" width="9" height="9" fill="#0F766E"/>
+<rect x="210.5" y="67.5" width="9" height="9" fill="#0F766E"/>
+<line x1="230" y1="146" x2="258" y2="146" stroke="#8F7EE6" stroke-width="3" stroke-linecap="round"/>
+<polygon points="268,146 258,140.5 258,151.5" fill="#8F7EE6"/>
+<rect x="232" y="120" width="32" height="20" rx="10.0" fill="#5B4BC4"/>
+<text x="248" y="134.3" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">×5</text>
+<polygon points="282,241 432,241 468,220 318,220" fill="#94A3B8" fill-opacity="0.22" stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="318,212 312,220 324,220" fill="#3B9F9A" fill-opacity="0.55"/>
+<polygon points="368,212 362,220 374,220" fill="#3B9F9A" fill-opacity="0.55"/>
+<polygon points="418,212 412,220 424,220" fill="#3B9F9A" fill-opacity="0.55"/>
+<polygon points="468,212 462,220 474,220" fill="#3B9F9A" fill-opacity="0.55"/>
+<polygon points="300,222.5 294,230.5 306,230.5" fill="#3B9F9A" fill-opacity="0.75"/>
+<polygon points="350,222.5 344,230.5 356,230.5" fill="#3B9F9A" fill-opacity="0.75"/>
+<polygon points="400,222.5 394,230.5 406,230.5" fill="#3B9F9A" fill-opacity="0.75"/>
+<polygon points="450,222.5 444,230.5 456,230.5" fill="#3B9F9A" fill-opacity="0.75"/>
+<polygon points="282,207 432,207 468,186 318,186" fill="#8F7EE6" fill-opacity="0.2"/>
+<polygon points="282,182 432,182 468,161 318,161" fill="#8F7EE6" fill-opacity="0.2"/>
+<polygon points="282,157 432,157 468,136 318,136" fill="#8F7EE6" fill-opacity="0.2"/>
+<polygon points="282,132 432,132 468,111 318,111" fill="#8F7EE6" fill-opacity="0.2"/>
+<polygon points="282,107 432,107 468,86 318,86" fill="#8F7EE6" fill-opacity="0.2"/>
+<line x1="318" y1="211" x2="318" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="368" y1="211" x2="368" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="418" y1="211" x2="418" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="468" y1="211" x2="468" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="186" x2="468" y2="186" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="161" x2="468" y2="161" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="136" x2="468" y2="136" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="111" x2="468" y2="111" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="86" x2="468" y2="86" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="318" y1="61" x2="468" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="300" y1="221.5" x2="300" y2="71.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="350" y1="221.5" x2="350" y2="71.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="400" y1="221.5" x2="400" y2="71.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="450" y1="221.5" x2="450" y2="71.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="196.5" x2="450" y2="196.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="171.5" x2="450" y2="171.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="146.5" x2="450" y2="146.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="121.5" x2="450" y2="121.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="96.5" x2="450" y2="96.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="300" y1="71.5" x2="450" y2="71.5" stroke="#3B9F9A" stroke-width="2" stroke-linecap="round"/>
+<line x1="282" y1="232" x2="282" y2="82" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="332" y1="232" x2="332" y2="82" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="382" y1="232" x2="382" y2="82" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="432" y1="232" x2="432" y2="82" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="207" x2="432" y2="207" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="182" x2="432" y2="182" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="157" x2="432" y2="157" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="132" x2="432" y2="132" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="107" x2="432" y2="107" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="82" x2="432" y2="82" stroke="#3B9F9A" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="282" y1="207" x2="318" y2="186" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="282" y1="182" x2="318" y2="161" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="282" y1="157" x2="318" y2="136" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="282" y1="132" x2="318" y2="111" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="282" y1="107" x2="318" y2="86" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="282" y1="82" x2="318" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="207" x2="368" y2="186" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="182" x2="368" y2="161" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="157" x2="368" y2="136" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="132" x2="368" y2="111" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="107" x2="368" y2="86" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="332" y1="82" x2="368" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="207" x2="418" y2="186" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="182" x2="418" y2="161" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="157" x2="418" y2="136" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="132" x2="418" y2="111" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="107" x2="418" y2="86" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="382" y1="82" x2="418" y2="61" stroke="#3B9F9A" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="432" y1="207" x2="468" y2="186" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="432" y1="182" x2="468" y2="161" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="432" y1="157" x2="468" y2="136" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="432" y1="132" x2="468" y2="111" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="432" y1="107" x2="468" y2="86" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="432" y1="82" x2="468" y2="61" stroke="#3B9F9A" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="332" y1="232" x2="382" y2="207" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="432" y1="232" x2="450" y2="196.5" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="382" y1="207" x2="332" y2="182" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="450" y1="196.5" x2="432" y2="182" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="332" y1="182" x2="382" y2="157" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="432" y1="182" x2="450" y2="146.5" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="382" y1="157" x2="332" y2="132" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="450" y1="146.5" x2="432" y2="132" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="332" y1="132" x2="382" y2="107" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="432" y1="132" x2="450" y2="96.5" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="382" y1="107" x2="332" y2="82" stroke="#F0388F" stroke-width="3" stroke-linecap="round"/>
+<line x1="450" y1="96.5" x2="432" y2="82" stroke="#F0388F" stroke-width="2.4" stroke-linecap="round"/>
+<polygon points="282,233 275,241 289,241" fill="#3B9F9A"/>
+<polygon points="332,233 325,241 339,241" fill="#3B9F9A"/>
+<polygon points="382,233 375,241 389,241" fill="#3B9F9A"/>
+<polygon points="432,233 425,241 439,241" fill="#3B9F9A"/>
+<rect x="25" y="14" width="200" height="24" rx="12.0" fill="#0F766E"/>
+<text x="125" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Typical floor · drawn in 2D</text>
+<rect x="284" y="14" width="186" height="24" rx="12.0" fill="#5B4BC4"/>
+<text x="377" y="30.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Assigned to storeys 1–5</text>
+<rect x="10" y="251" width="230" height="22" rx="11.0" fill="#334155"/>
+<text x="125" y="266.1" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">Copy, move and delete on the floor</text>
+<rect x="270" y="251" width="230" height="22" rx="11.0" fill="#334155"/>
+<text x="385" y="266.1" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">Stacked in Z, every column aligned</text>
+</svg>
