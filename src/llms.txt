@@ -1,0 +1,33 @@
+# StruTrix Studio
+
+> StruTrix Studio is professional Windows software for the structural analysis and steel design of three-dimensional frames, made by RamisoftSolutions for practising engineers on real projects. The program is free, with no limit on model size, no time limit, no watermark and no account required.
+
+## What it does
+
+- Three-dimensional frames of any size: buildings, industrial structures, pipe racks, towers, trusses and transmission poles, drawn member by member or generated.
+- First-order analysis, and the AISC 360-22 direct analysis method (second order, P-Delta and P-delta) for every load combination.
+- An independent equilibrium audit of every result.
+- AISC 360-22 steel design by LRFD and ASD for the sections of the AISC Shapes Database v16.0, every check with its clause, and Optimise, which chooses the lightest section of each group that passes.
+- Joint, member, area and thermal loads and self-weight; the ASCE 7-22 load combination generator; line loading by the NESC, ASCE MOP 74 and MOP 113.
+- The calculation report.
+
+## Free, with no limits
+
+- The free program sets no limit on joints, members, supports, load cases or combinations: a model is as large as the computer can hold. It is developed and timed on a building of about 10,000 members.
+- No time limit, no watermark, no advertising and no telemetry. No account is needed, and it works offline.
+- It is not a student, educational or evaluation edition: it is the same professional program in every plan, and nothing restricts commercial use.
+- A free account adds cloud jobs shared with FoundaTrix Studio and PileTrix Studio, version history, an AI assistant connector, and a free trial of every Pro feature.
+- Pro features include tapered tubes to ASCE/SEI 48-19 with the pole and H-frame generators, IFC 4.3 and Revit export, and the firm's name and logo on the report. Pro pricing has not been announced.
+
+## Pages
+
+- [Home](https://www.strutrix.com/): what the program does, the plans, and what is coming soon
+- [Features](https://www.strutrix.com/features/): the engineering in detail, and what version 1 leaves out
+- [Pricing](https://www.strutrix.com/pricing/): the free, signed-in and Pro plans compared, and questions answered
+- [Support](https://www.strutrix.com/support/): the user's manual, bug reports and feature requests
+- [Microsoft Store listing](https://apps.microsoft.com/detail/9PM7B70ZXWRC): where to get it
+- [Terms of use](https://www.strutrix.com/terms/) and [privacy policy](https://www.strutrix.com/privacy/)
+
+## The family
+
+StruTrix Studio is one of three programs from RamisoftSolutions, with one account for all of them: FoundaTrix Studio for rigid foundations (https://www.foundatrix.com) and PileTrix Studio for piles (https://www.piletrix.com).
