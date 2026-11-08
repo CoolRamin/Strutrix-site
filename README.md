@@ -1,13 +1,92 @@
-# StruTrix Studio Website
+# StruTrix Studio
 
-Public source for the product website of **StruTrix Studio**, a Windows desktop program by RamisoftSolutions for the
-structural analysis and design of three-dimensional frames: buildings, industrial structures, pipe racks, towers,
-trusses, portal frames and transmission poles. It analyses every load combination to first order or by the AISC 360-22
-direct analysis method, designs every steel member to AISC 360-22 by LRFD or ASD, generates the ASCE 7-22 load
-combinations, audits every result's equilibrium, and hands its support reactions to FoundaTrix Studio and PileTrix Studio.
+**StruTrix Studio** is professional Windows software by RamisoftSolutions for the structural analysis and design of
+three-dimensional frames: buildings, industrial structures, pipe racks, towers, trusses, portal frames and transmission
+poles. It analyses every load combination to first order or by the AISC 360-22 direct analysis method, designs every steel
+member to AISC 360-22 by LRFD or ASD, analyses structures built in stages, designs seismic force-resisting systems to
+ANSI/AISC 341-22, and audits every result's equilibrium. The analysis and the steel design are free, with no limit on model
+size or time and no account required.
 
-This repository's **Issues** are also the public place to report a bug in the program or ask for a feature: see
+**Latest version: 1.105 (November 7, 2026).** [Website](https://www.strutrix.com/) ·
+[Features](https://www.strutrix.com/features/) · [What's new](https://www.strutrix.com/whats-new/) ·
+[Changelog](CHANGELOG.md) · [Microsoft Store](https://apps.microsoft.com/detail/9PM7B70ZXWRC)
+
+> This README describes the program as of its latest version. The website, https://www.strutrix.com, is the complete and
+> authoritative description of what the program does, with its limits stated plainly on the features page. This
+> repository holds the website's source and the program's public issue tracker; the program's own source is private.
+
+## What StruTrix Studio does
+
+- **Any frame in 3D**, drawn member by member with drafting precision (work planes, set-out grid lines, object snaps,
+  typed coordinates in feet and inches) or generated from a few dimensions: building frames, trusses, portal frames,
+  circular grids, and (Pro) tapered transmission poles and H-frames.
+- **Supports and connections**: supports fixed, pinned or on springs, one-way springs, imposed displacements, end releases
+  and partial fixity, rigid end offsets and rigid links, tension-only and compression-only members, and rigid diaphragms.
+- **Loads**: joint, member, projected, area and thermal loads and self-weight, in basic load cases by ASCE 7-22 category;
+  the ASCE 7-22 combination generator for strength, allowable stress and service combinations, with notional loads.
+- **Analysis**: first-order, or the AISC 360-22 direct analysis method (P-Delta and P-delta, reduced stiffness, notional
+  loads) chosen per combination, on every core of the computer, with an independent equilibrium audit of every combination.
+- **Staged construction analysis** (Pro): an addition to an existing structure, or a structure built in any number of
+  construction stages, analysed the way it is built. Each stage's loads are carried by the structure standing then, every
+  member carrying its axial force and deformed shape into the next stage, and new members fitted unstressed to where the
+  structure stands. A conventional analysis of the structure built at once lets new members share loads the existing ones
+  were carrying before they were there, which understates the forces in the existing members and misplaces the load
+  distribution; in the User's Manual's own example it puts the existing columns' axial force 36% low.
+- **AISC 360-22 steel design** by LRFD and ASD at points no more than six inches apart, unbraced lengths found from the
+  structure, Optimise for the lightest section of each group that passes, net deflection checks, and a member detail that
+  works every check equation by equation with its clause.
+- **Seismic design by ANSI/AISC 341-22** (Pro), with the seismic requirements of ASCE 7-22: ordinary, intermediate and
+  special moment frames, cantilever column systems, ordinary and special concentrically braced frames, eccentrically
+  braced frames, buckling-restrained braced frames and dual systems; the equivalent lateral force, story drift and
+  stability; the capacity-limited analyses; the member side of ANSI/AISC 358-22 prequalified moment connections; the
+  required strengths of column bases, splices and connections; and what the construction documents must show, with the
+  protected zones drawn on the model.
+- **Transmission structures** (Pro): tapered round and polygonal tubes designed to ASCE/SEI 48-19, and transmission line
+  design: line loading by the NESC, ASCE MOP 74 and MOP 113, conductors' sag and tension, insulator swing, NESC clearances,
+  and line security and construction loads.
+- **The structure link** (Pro): FoundaTrix Studio and PileTrix Studio read a saved structure's support reactions from the
+  same cloud job, as footing loads or a pile's head loads.
+- **Reports and exchange**: a typeset calculation report (free; the firm's name and logo on it Pro), export to IFC 4.3 and
+  to Revit as native structural framing (Pro), and tables that take a paste from a spreadsheet and copy out.
+- **Cloud and AI** (free account): cloud jobs shared with FoundaTrix Studio and PileTrix Studio, version history, and a
+  connector through which your own AI assistant creates structures and runs what-if analyses that only you apply.
+
+## New in version 1.105
+
+- Staged construction analysis in the Microsoft Store: an addition to an existing structure, or any number of stages.
+- Seismic design by AISC 341-22, with ASCE 7-22's equivalent lateral force, story drift and stability.
+- Rigid diaphragms.
+- The support reactions read by FoundaTrix Studio and PileTrix Studio.
+- The User's Manual rearranged, with pictured tutorials of a staged construction analysis and a seismic design.
+
+Every release's notes are in [CHANGELOG.md](CHANGELOG.md) and on the website's
+[What's new](https://www.strutrix.com/whats-new/) page.
+
+## Common questions
+
+- **Does StruTrix Studio do staged construction analysis?** Yes, since version 1.105 in the Microsoft Store, as a Pro
+  feature: an addition to an existing structure, or a structure built in any number of construction stages, each stage
+  analysed on the structure standing then, first-order or by the direct analysis method.
+- **Does it design for seismic loads?** Yes: seismic force-resisting systems are designed to ANSI/AISC 341-22 with
+  ASCE 7-22's equivalent lateral force, drift and stability (Pro). It does not run a modal response spectrum or
+  time-history analysis.
+- **Is it free?** The modelling, the loads, the combinations, the analysis, the AISC 360-22 steel design and the
+  calculation report are free, with no limit on model size or time, no watermark and no account. It is professional
+  software for real projects, not a student or evaluation edition. The Pro features are a separate set, free to try.
+- **What does it not do?** Plates, walls and solids, dynamics, material nonlinearity, concrete, wood and cold-formed
+  steel design, and the design of connections' plates, bolts and welds. The website's features page lists every limit.
+
+## About this repository
+
+This repository is the public source for the product website of StruTrix Studio, www.strutrix.com. Its **Issues** are
+also the public place to report a bug in the program or ask for a feature: see
 [Reporting bugs and requesting features](#reporting-bugs-and-requesting-features).
+
+**With every Store release**, update together: a new card on top of `src/whats-new/index.html`, the same notes on top of
+[CHANGELOG.md](CHANGELOG.md), this README's "Latest version", "What StruTrix Studio does", "New in version" and "Common
+questions", `src/llms.txt`, and the repository's GitHub description and topics where the headline features change. AI
+search tools read this README as the program's description, so a feature missing here reads to them as a feature the
+program lacks.
 
 ## Scope of this repository
 
