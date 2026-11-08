@@ -2780,6 +2780,89 @@ section {
   }
 }
 
+/* ---------- What's new: the release notes page, newest first (/whats-new/) ---------- */
+
+.releases {
+  display: grid;
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.release {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 30px 34px 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.release--latest {
+  border-color: color-mix(in srgb, var(--accent-strong) 70%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-strong) 55%, transparent), var(--card-shadow);
+}
+
+.release__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.release__head h2 {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.02em;
+}
+
+.release__date {
+  color: var(--ink-faint);
+  font-size: 14.5px;
+}
+
+.release__summary {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 16.5px;
+}
+
+.release h3 {
+  margin: 24px 0 12px;
+  font-size: 12.5px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.release .check-list li strong {
+  color: var(--ink);
+}
+
+.release__meta {
+  margin: 24px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 13.5px;
+  color: var(--ink-faint);
+}
+
+.release__meta a {
+  color: var(--accent-text);
+}
+
+.badge--latest {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent-text);
+  border: 1px solid color-mix(in srgb, var(--accent-strong) 45%, transparent);
+}
+
+@media (max-width: 620px) {
+  .release {
+    padding: 22px 20px 20px;
+  }
+}
+
 /* ---------- StruTrix Studio additions (the rules above are the family's shared file, unchanged) ---------- */
 
 /* Six frame generators in two rows of three; two across on a phone. */
@@ -2876,4 +2959,244 @@ section {
   margin: 0 0 18px;
   font-size: 15px;
   color: var(--ink-soft);
+}
+
+/* The release's lead feature on Home (#staged): a dark band in the accent's teal and the amber that marks what a
+   conventional analysis gets wrong, with two captures side by side, a strip of figures and the cases it is for. */
+.spotlight {
+  position: relative;
+  background: radial-gradient(ellipse 80% 70% at 0% 0%, #0f3b3a, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 100% 100%, #3a2a0e, transparent 60%), var(--hero-bg);
+  color: var(--hero-ink);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: repeating-linear-gradient(30deg, rgba(45, 212, 191, 0.07) 0 1px, transparent 1px 46px),
+    repeating-linear-gradient(150deg, rgba(45, 212, 191, 0.07) 0 1px, transparent 1px 46px);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black 20%, transparent 100%);
+}
+
+.spotlight .section-head {
+  max-width: 860px;
+}
+
+.spotlight .section-head p:not(.eyebrow) {
+  color: var(--hero-ink-soft);
+}
+
+.spotlight .section-head h2 .grad {
+  background: linear-gradient(100deg, #5eead4, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.spotlight h3 {
+  color: #ffffff;
+}
+
+.spotlight__compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 8px;
+}
+
+.spotlight .shot figcaption {
+  color: var(--hero-ink-soft);
+  padding-top: 16px;
+}
+
+.spotlight .shot figcaption strong {
+  color: #ffffff;
+}
+
+.compare-tag {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.compare-tag--good {
+  background: rgba(45, 212, 191, 0.16);
+  color: #5eead4;
+  border: 1px solid rgba(45, 212, 191, 0.4);
+}
+
+.compare-tag--warn {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.42);
+}
+
+.stat-strip {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat {
+  padding: 22px 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.stat__value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #fbbf24;
+}
+
+.stat__label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: var(--hero-ink-soft);
+}
+
+.spotlight__note {
+  margin: 18px 0 0;
+  font-size: 13.5px;
+  color: var(--hero-ink-soft);
+}
+
+.spotlight__why {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  margin-top: 72px;
+  align-items: start;
+}
+
+.spotlight__why h3 {
+  margin: 0 0 12px;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.spotlight__why-text > p {
+  margin: 0 0 20px;
+  color: var(--hero-ink-soft);
+  font-size: 16.5px;
+}
+
+.example-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.example {
+  padding: 20px 20px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.example svg {
+  width: 26px;
+  height: 26px;
+  color: #5eead4;
+}
+
+.example h4 {
+  margin: 10px 0 6px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.example p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--hero-ink-soft);
+}
+
+.spotlight__does {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  margin-top: 72px;
+  align-items: center;
+}
+
+.spotlight__does .clauses {
+  margin-top: 22px;
+}
+
+.spotlight .cta-row {
+  margin: 28px 0 0;
+}
+
+@media (max-width: 900px) {
+  .spotlight__compare,
+  .stat-strip,
+  .spotlight__why,
+  .spotlight__does {
+    grid-template-columns: 1fr;
+  }
+  .spotlight__why,
+  .spotlight__does {
+    gap: 28px;
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 620px) {
+  .example-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The seismic design on Home (#seismic): a wide capture above the parts of the design, in cards. */
+.wide-shot {
+  margin: 0 0 36px;
+}
+
+.spotlight .clauses li {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(148, 163, 184, 0.25);
+  color: var(--hero-ink-soft);
+}
+
+/* The features page's staged construction section is a spotlight band too: its spec cards go dark with it. */
+.spotlight .spec-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(148, 163, 184, 0.22);
+  box-shadow: none;
+}
+
+.spotlight .card__kicker {
+  color: #5eead4;
+}
+
+.spotlight .section-head a {
+  color: #5eead4;
+}
+
+.spotlight .spec-card .check-list li {
+  color: var(--hero-ink-soft);
 }

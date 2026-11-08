@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>StruTrix Studio — 3D Frame Analysis &amp; AISC Steel Design Software for Windows</title>
-<meta name="description" content="StruTrix Studio analyses and designs three-dimensional frames: buildings, industrial structures, pipe racks, towers, trusses and transmission poles. First-order or AISC 360-22 direct analysis of every combination, steel design by LRFD and ASD, ASCE 7-22 combinations and an equilibrium audit. Free, with no limit on model size or time and no account: professional software for engineers on real projects." />
+<meta name="description" content="StruTrix Studio analyses and designs three-dimensional frames: buildings, industrial structures, pipe racks, towers, trusses and transmission poles. First-order or AISC 360-22 direct analysis of every combination, steel design by LRFD and ASD, ASCE 7-22 combinations and an equilibrium audit; staged construction analysis and AISC 341-22 seismic design with Pro. Free, with no limit on model size or time and no account: professional software for engineers on real projects." />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#0a0f1c" />
 <meta property="og:type" content="website" />
@@ -37,7 +37,9 @@
     "The lightest passing section of each group (Optimise)",
     "ASCE 7-22 load combination generator; joint, member, area and thermal loads",
     "An independent equilibrium audit of every result",
-    "The calculation report"
+    "The calculation report",
+    "Staged construction analysis: an addition to an existing structure, or any number of construction stages (Pro)",
+    "Seismic design of steel systems by AISC 341-22 with ASCE 7-22's equivalent lateral force and story drift (Pro)"
   ],
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "No account and no limits: any model size, no time limit, no watermark, commercial use; the analysis, the steel design and the calculation report." },
@@ -54,8 +56,8 @@
 <div class="announce-bar">
   <div class="container announce-bar__inner">
     <span class="announce-bar__tag">New</span>
-    <span>StruTrix Studio is on the Microsoft Store: 3D frame analysis and AISC 360-22 steel design, free with no limits, for real projects.</span>
-    <a href="https://apps.microsoft.com/detail/9PM7B70ZXWRC" rel="noopener">Get it &rarr;</a>
+    <span>Version 1.105: staged construction analysis and seismic design by AISC 341-22. The analysis and the steel design stay free, with no limits, for real projects.</span>
+    <a href="/whats-new/">What's new &rarr;</a>
   </div>
 </div>
 
@@ -71,6 +73,7 @@
           <li><a href="/features/">Features</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
@@ -139,6 +142,158 @@
       </figure>
     </div>
   </div>
+
+  <!-- ===================== New: staged construction analysis ===================== -->
+  <section id="staged" class="spotlight on-dark" aria-labelledby="staged-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">New in version 1.105 &middot; Pro</p>
+        <h2 id="staged-title">Staged construction analysis. <span class="grad">The structure, analysed the way it is built.</span></h2>
+        <p>Add to a structure that already stands, and its existing members are already carrying their dead load, and standing deformed under it, before the first new member arrives. A conventional analysis builds everything at once, so the new members share loads they never carried and the existing ones look less loaded than they are. StruTrix Studio analyses each stage on the structure standing then, so every force is where it really is.</p>
+      </div>
+
+      <div class="spotlight__compare">
+        <figure class="shot reveal">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Results &middot; Axial force &middot; staged, as built</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/staged-axial-as-built.webp" width="870" height="598" loading="lazy" alt="StruTrix Studio: a portal frame with a new column added under the middle of its existing beam, analysed by construction stages, the existing members drawn orange and the new column green, with the axial force drawn on each column: 20.6 and 20.7 kip in the existing columns and 24.7 kip in the new one." /></div>
+          </div>
+          <figcaption><span class="compare-tag compare-tag--good">Staged, as built</span><br /><strong>The existing columns carry 20.6 and 20.7 kip.</strong> The new column carries 24.7 kip: only what was put on the structure after it was built.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Results &middot; Axial force &middot; conventional, built at once</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/staged-axial-at-once.webp" width="870" height="598" loading="lazy" alt="StruTrix Studio: the same frame analysed as if it were built at once, with the axial force drawn on each column: the existing columns drop to 13.2 and 13.3 kip and the new column takes 39.6 kip." /></div>
+          </div>
+          <figcaption><span class="compare-tag compare-tag--warn">Conventional, built at once</span><br /><strong>The existing columns drop to 13.2 and 13.3 kip.</strong> The new column takes 39.6 kip, about 15 kip of existing dead load that was in the old columns before it was there.</figcaption>
+        </figure>
+      </div>
+
+      <ul class="stat-strip" aria-label="What the conventional analysis gets wrong in this example">
+        <li class="stat reveal"><span class="stat__value">36% low</span><span class="stat__label">The existing columns' axial force in the conventional analysis: 13.2 kip against the 20.6 they really carry.</span></li>
+        <li class="stat reveal"><span class="stat__value">60% high</span><span class="stat__label">The new column's axial force: 39.6 kip against 24.7, given dead load it never carried.</span></li>
+        <li class="stat reveal"><span class="stat__value">0.48 &rarr; 0.30</span><span class="stat__label">The governing design ratio, on an existing column: analysed at once, more than a third of its demand disappears.</span></li>
+      </ul>
+      <p class="spotlight__note reveal">The example is the User's Manual's own tutorial (section 13.3): a portal frame of W10X33 columns and a 20&nbsp;ft W16X26 roof beam, with a new column added under the middle of the beam to carry new equipment, under 1.2D + 1.6L + 1.2D<sub>new</sub>. How large the difference is depends on the structure.</p>
+
+      <div class="spotlight__why">
+        <div class="spotlight__why-text reveal">
+          <h3>Why a conventional analysis gets it wrong</h3>
+          <p>Analysed as one structure, an addition's stiffness shares the sustained loads the existing structure was carrying before the addition existed. The answer looks plausible, balances, and is wrong in both directions.</p>
+          <ul class="check-list">
+            <li><strong>The existing members are understated:</strong> the very members you most need to check, often older and lighter, look stronger than they are.</li>
+            <li><strong>The new members are overstated</strong>, sized for load that never reaches them.</li>
+            <li><strong>The load distribution is wrong:</strong> the reactions, foundation loads and connection forces are split wrongly between the old supports and the new.</li>
+            <li><strong>The deflections are wrong:</strong> an existing beam's dead-load sag happened before anything was built on it, and a new member is fitted to where the structure stands, not where it was drawn.</li>
+          </ul>
+        </div>
+        <ul class="example-grid" aria-label="When a staged analysis is needed">
+          <li class="example reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M5 6v15M19 6v15"/><path d="M12 7v14"/><path d="M10 21h4"/></svg>
+            <h4>A new support under an existing beam</h4>
+            <p>A column, post or bearing added under a beam to carry new equipment or a heavier roof. The beam keeps the sag it already has; the new support relieves only what is put on after it.</p>
+          </li>
+          <li class="example reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18"/><path d="M5 4v17M19 4v17"/><path d="M5 13h14"/><path d="M12 13v8"/></svg>
+            <h4>A mezzanine inside a building</h4>
+            <p>A floor or platform built under an existing roof and tied into columns that already carry it. The columns' existing load stays theirs; the mezzanine adds its own.</p>
+          </li>
+          <li class="example reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4M20 21V4M4 4h16"/><path d="M4 21 20 4M4 4l16 17"/></svg>
+            <h4>Bracing added to a frame</h4>
+            <p>Braces fitted to a frame as it stands carry none of its existing dead load. Analysed at once, they pick up gravity force from the columns' shortening that they never see.</p>
+          </li>
+          <li class="example reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21v-8h6v8"/><path d="M13 21V9h6v12"/><path d="M3 9l8-6 10 6"/></svg>
+            <h4>Several stages in turn</h4>
+            <p>An existing frame, a mezzanine added under it, then a roof over both: each stage carried by the structure standing when it is built, in as many stages as the work needs.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="spotlight__does">
+        <div class="reveal">
+          <h3>What it does</h3>
+          <ul class="check-list">
+            <li>Construction stages of any number, named and described in their own table; every member, rigid link, support and load case built or put on in its stage, the dead loads in the first unless you say otherwise</li>
+            <li>Each combination solved stage by stage, first-order or by the direct analysis method, every member carrying its axial force, &tau;<sub>b</sub> and deformed shape into the next stage</li>
+            <li>A new member fitted unstressed to where the structure stands: a column under a sagged beam is as long as the gap it fills</li>
+            <li>The final state, the state after each stage and what each stage alone added, each held to its own equilibrium audit</li>
+            <li>The steel designed on the final state; an existing member's detail says what it carried before the addition, and a beam's deflection is checked only under what was added after it stood</li>
+            <li>The report states the stages, and an IFC or Revit export marks each member existing or new</li>
+          </ul>
+          <ul class="clauses" aria-label="Provisions">
+            <li>AISC 360-22 C2</li><li>C2.3</li><li>ASCE 7-22 &sect;2.3</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="/pricing/#try-pro">Try it free</a>
+            <a class="btn btn--secondary" href="/features/#staged">The details</a>
+          </div>
+        </div>
+        <figure class="shot reveal">
+          <div class="shot__frame">
+            <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Results &middot; Moment &middot; final state</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+            <div class="shot__body"><img src="/images/screens/staged-moment-final.webp" width="870" height="598" loading="lazy" alt="StruTrix Studio: the same frame seen in its plane, the beam's bending moment in the final state drawn on it, peaking at 49.7 kip-ft in each half: the sag the existing dead load put in the beam stays there, and the new column relieves only what was put on after it was built." /></div>
+          </div>
+          <figcaption><strong>The existing sag stays in the beam.</strong> Before the column stood, the existing dead load sagged the beam 49.9 kip-ft at mid-span. The column relieves only what was put on after it, so the final moment still peaks at 49.7 kip-ft.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== New: seismic design ===================== -->
+  <section id="seismic" class="alt-band" aria-labelledby="seismic-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--premium">New in version 1.105 &middot; Pro</p>
+        <h2 id="seismic-title">Seismic design by AISC&nbsp;341&#8209;22, for the whole system.</h2>
+        <p>State the seismic force-resisting systems and assign their beams and braces: StruTrix Studio finds every member's role from the model and designs the system by ANSI/AISC&nbsp;341-22, with the seismic requirements of ASCE&nbsp;7-22 it rests on, beside the AISC&nbsp;360-22 design every member already has. A member of the system must pass both.</p>
+      </div>
+      <figure class="shot wide-shot reveal">
+        <div class="shot__frame">
+          <div class="shot__bar"><img src="/favicon.svg" alt="" width="16" height="16" /><span class="shot__title">Two-story steel building (tutorial) &mdash; StruTrix Studio</span><span class="shot__controls" aria-hidden="true"><span class="min"></span><span class="max"></span><span class="close"></span></span></div>
+          <div class="shot__body"><img src="/images/screens/seismic-protected-zones.webp" width="1600" height="683" loading="lazy" alt="StruTrix Studio's Seismic Design tab: a two-story steel building with special moment frames along one axis and chevron-braced special concentrically braced frames along the other, its floor loads drawn, and the protected zones drawn as red sleeves at the beams' hinge regions and along the braces." /></div>
+        </div>
+        <figcaption><strong>The protected zones drawn where AISC 341-22 puts them</strong>, at the moment frames' beam hinges and along the braces, for the construction documents. From the User's Manual's seismic design tutorial (section 13.4).</figcaption>
+      </figure>
+      <div class="card-grid" aria-label="What the seismic design covers">
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4M20 21V4M4 4h16M4 12h16"/><path d="M4 21l8-9 8 9"/></svg></div>
+          <h3>Every core system</h3>
+          <p>Ordinary, intermediate and special moment frames, cantilever column systems, ordinary and special concentrically braced frames, eccentrically braced frames and buckling-restrained braced frames, dual systems included, each by its row of ASCE 7-22 Table 12.2-1.</p>
+        </div>
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h3l2-6 3 12 3-9 2 5 2-2h5"/></svg></div>
+          <h3>The equivalent lateral force</h3>
+          <p>The seismic weight, the period, the base shear and its distribution, the accidental torsion and the torsional irregularity, written as earthquake load cases; the combinations with overstrength; rigid diaphragms.</p>
+        </div>
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V3"/><path d="M4 21h17"/><path d="M8 17l4-5 3 2 5-7"/></svg></div>
+          <h3>Story drift and stability</h3>
+          <p>Each story's design drift and stability coefficient along each axis, from each earthquake case, against the allowable drift.</p>
+        </div>
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18M19 3v18"/><path d="M5 8l14 8M19 8 5 16"/></svg></div>
+          <h3>Capacity-limited analyses</h3>
+          <p>The braced frames' columns and beams designed for the braces' expected and post-buckling strengths, the links' and the buckling-restrained braces' adjusted strengths, analysed whole.</p>
+        </div>
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18M3 15h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Moment frame connections and joints</h3>
+          <p>The beams' prequalified connections by ANSI/AISC 358-22, the probable moment at the column face, the strong-column weak-beam ratio, the panel zone and its doubler, and the continuity plates.</p>
+        </div>
+        <div class="card card--hover reveal">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
+          <h3>Bases, splices and the documents</h3>
+          <p>The required strengths of every column base, column splice and brace connection, and what the construction documents must show: protected zones, demand critical welds and stability bracing.</p>
+        </div>
+      </div>
+      <p class="types-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+        <span><strong>What it leaves to you.</strong> Composite systems, plate shear walls, special truss moment frames and multi-tiered braced frames are not designed, nor are a connection's plates, bolts and welds (their required strengths are reported). The full list is on the <a href="/features/#seismic">features page</a>.</span>
+      </p>
+    </div>
+  </section>
 
   <!-- ===================== No account ===================== -->
   <section class="pillars" aria-labelledby="free-title">
@@ -426,8 +581,8 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow eyebrow--premium">Pro</p>
-        <h2 id="pro-title">Poles and H-frames, BIM export, <span class="grad">and your firm on the report.</span></h2>
-        <p>The Pro features take the work further: tapered tubular structures designed to ASCE 48-19, the designed structure sent to your BIM tools, your firm's name and logo on every page, and soon the link that hands your reactions to your foundations.</p>
+        <h2 id="pro-title">Staged construction, seismic design, poles and BIM, <span class="grad">and your reactions to your foundations.</span></h2>
+        <p>The Pro features take the work further: <a href="#staged">staged construction analysis</a> and <a href="#seismic">seismic design by AISC&nbsp;341-22</a>, tapered tubular structures designed to ASCE 48-19, the designed structure sent to your BIM tools, your firm's name and logo on every page, and the link that hands your reactions to your foundations and piles.</p>
         <div class="promo-note">
           <span class="badge badge--premium">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 6.3L20.5 10l-6.3 2.2L12 18.5l-2.2-6.3L3.5 10l6.3-1.7z"/></svg>
@@ -488,9 +643,9 @@
         <div class="premium-extra reveal">
           <div class="premium-extra__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-5 8 5v12"/><path d="M8 21v-6h8v6"/><path d="M2 21h20"/></svg></div>
           <div>
-            <span class="badge badge--soon">Coming soon</span>
+            <span class="badge badge--latest">New</span>
             <h3>Foundations and piles that read your reactions</h3>
-            <p>FoundaTrix Studio and PileTrix Studio will read a saved structure's support reactions from the same cloud job. <a href="#soon">More below.</a></p>
+            <p>FoundaTrix Studio and PileTrix Studio read a saved structure's support reactions from the same cloud job. <a href="#link">More below.</a></p>
           </div>
         </div>
         <div class="premium-extra reveal">
@@ -504,48 +659,38 @@
     </div>
   </section>
 
+  <!-- ===================== The structure link ===================== -->
+  <section id="link" aria-labelledby="link-title">
+    <div class="container">
+      <div class="assistant reveal">
+        <div class="assistant__text">
+          <p class="eyebrow eyebrow--premium">New in version 1.105 &middot; Pro &middot; The structure link</p>
+          <h2 id="link-title">Your foundations and piles read the reactions. Nobody retypes them.</h2>
+          <p>Run the structure and save it to the cloud: its support reactions travel with it. In the same job, FoundaTrix Studio and PileTrix Studio read them as their loads, and take the latest saved version before every run.</p>
+          <ul class="check-list">
+            <li>FoundaTrix Studio reads each support's dead, live, roof live, snow, rain, wind and earthquake load cases and combines them by its own foundation combinations; or takes your strength and allowable stress combinations as they were solved, second-order effects included</li>
+            <li>It can place a footing at each support, or load the pedestals there</li>
+            <li>PileTrix Studio reads one support's reactions, under a combination or a basic load case, as the loads at a pile's head in the plane you choose, along X or along Y</li>
+            <li>Each analysis there records the version it read; when the structure has changed and been saved since, its next run takes the new version and says so</li>
+          </ul>
+          <p class="assistant__note">Reactions are handed over as the loads on the foundation, in kips and kip-feet along the global axes. Only a structure saved with a current run is read; one with a tension-only or compression-only member or spring is read through its combinations, and a combination with overstrength or a service combination is offered to neither program. Reading a structure is a Pro feature of FoundaTrix Studio and PileTrix Studio and needs a StruTrix Studio subscription or trial as well.</p>
+        </div>
+        <figure class="assistant__art">
+          <img src="/images/screens/structure-link.svg" width="1200" height="760" loading="lazy" alt="Illustration: a steel frame analysed in StruTrix Studio and saved with its support reactions to the cloud; FoundaTrix Studio reads them as the loads on a footing at each support, and PileTrix Studio reads one support's reactions as the loads at a pile's head, always from the latest saved version." />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== Coming soon ===================== -->
   <section id="soon" class="alt-band" aria-labelledby="soon-title">
     <div class="container">
       <div class="section-head section-head--center reveal">
         <p class="eyebrow">Coming soon</p>
-        <h2 id="soon-title">Structures built in stages, reactions your foundations read, buildings stacked from typical floors, and steel pushed past yield.</h2>
-        <p>Four features on their way, three of them Pro: an addition analysed on the existing structure as it actually stands, the support reactions read by FoundaTrix Studio and PileTrix Studio as their loads, a multi-storey building modelled from its typical floors, free with an account, and a seismic assessment of steel buildings by the nonlinear static procedure of ASCE&nbsp;41-23.</p>
+        <h2 id="soon-title">Buildings stacked from typical floors, and steel pushed past yield.</h2>
+        <p>Two features on their way: a multi-storey building modelled from its typical floors, free with an account, and a seismic assessment of steel buildings by the nonlinear static procedure of ASCE&nbsp;41-23, a Pro feature.</p>
       </div>
       <div class="soon-grid">
-        <article class="soon-card reveal">
-          <div class="type-card__art"><img src="/images/soon/staged-construction.svg" width="520" height="280" loading="lazy" alt="Illustration of a staged construction analysis: an existing two-storey frame, stage 0, sagged under its dead load against its drawn position; an addition, stage 1, of a braced bay and a new column fitted under the sagged beam, carrying only the loads put on after it; and lateral loads carried by the whole frame." /></div>
-          <div class="soon-card__body">
-            <div class="soon-card__badges"><span class="badge badge--soon">Coming next</span><span class="badge badge--premium">Pro</span></div>
-            <h3>Staged construction analysis</h3>
-            <p>Add to an existing structure and analyse it as it is built. The existing members already carry their sustained loads, and stand deformed under them, when the addition is built onto them; the addition carries only what is put on after it, and every later load, live, wind or earthquake, is carried by the whole structure.</p>
-            <ul class="check-list check-list--sm">
-              <li>Any number of construction stages, each named and described in its own table: an existing frame, a mezzanine added under it, a roof over both</li>
-              <li>Every member, rigid link, support and load case built or put on in its stage, the dead loads in the first stage unless you say otherwise</li>
-              <li>Each combination solved stage by stage, first order or by the direct analysis method, every member carrying its axial force, &tau;<sub>b</sub> and deformed shape into the next stage</li>
-              <li>A new member fitted unstressed to where the structure stands: a column under a sagged beam is as long as the gap it fills</li>
-              <li>The final state, the state after each stage and each stage's increment, each held to its own equilibrium audit; the steel designed on the final state</li>
-            </ul>
-            <ul class="clauses" aria-label="Provisions">
-              <li>AISC 360-22 C2</li><li>C2.3</li>
-            </ul>
-          </div>
-        </article>
-        <article id="link" class="soon-card reveal">
-          <div class="type-card__art"><img src="/images/soon/structure-link.svg" width="520" height="280" loading="lazy" alt="Illustration of the structure link: a braced steel frame run and saved in StruTrix Studio, its support reactions carried through the cloud job to a footing in FoundaTrix Studio and to the head of a pile in PileTrix Studio, always from the latest saved version." /></div>
-          <div class="soon-card__body">
-            <div class="soon-card__badges"><span class="badge badge--soon">In testing</span><span class="badge badge--premium">Pro</span></div>
-            <h3>Reactions read by your foundations and piles</h3>
-            <p>Run the structure and save it to the cloud, and its support reactions travel with it: FoundaTrix Studio and PileTrix Studio, in the same job, read them as their loads, always from the latest saved version. Nobody retypes them.</p>
-            <ul class="check-list check-list--sm">
-              <li>FoundaTrix Studio: each support's dead, live, roof live, snow, rain, wind and earthquake load cases, combined by its own foundation combinations; or your strength and allowable stress combinations as they were solved, second-order effects included; and a footing placed at each support</li>
-              <li>PileTrix Studio: one support's reactions, under a combination or a basic load case, as the loads at a pile's head in the plane you choose, along X or along Y</li>
-              <li>Each analysis there records the version it read, and its next run takes a newer saved version and says so</li>
-              <li>Only a structure saved with a current run is read; one with a tension-only or compression-only member or spring is read through its combinations</li>
-              <li>A Pro feature of FoundaTrix Studio and PileTrix Studio, which needs a StruTrix Studio subscription or trial as well</li>
-            </ul>
-          </div>
-        </article>
         <article id="building" class="soon-card reveal">
           <div class="type-card__art"><img src="/images/soon/building-modeler.svg" width="520" height="280" loading="lazy" alt="Illustration of the multi-storey building modeller: a typical floor drawn in plan on grid lines A to D and 1 to 3, with its beams, the column points beneath it and two braced bays, copied up five storeys into a six-storey braced steel building whose columns line up from its supports to its roof." /></div>
           <div class="soon-card__body">
@@ -664,10 +809,12 @@
           <div class="tier__price"><strong>Soon</strong><span>pricing to be announced</span></div>
           <p class="tier__blurb">Every Pro feature without a time limit, for engineers and firms. Try all of it free.</p>
           <ul class="check-list check-list--premium check-list--sm">
+            <li>Staged construction analysis</li>
+            <li>Seismic design by AISC 341-22</li>
             <li>Tapered tubes, poles and H-frames</li>
             <li>IFC 4.3 and Revit export</li>
             <li>Your firm on the report</li>
-            <li>Reactions to FoundaTrix Studio and PileTrix Studio (coming soon)</li>
+            <li>Reactions to FoundaTrix Studio and PileTrix Studio</li>
             <li>Search by what a structure holds</li>
           </ul>
           <a class="btn btn--premium" href="/pricing/#try-pro">Try Pro free</a>
@@ -764,6 +911,7 @@
           <li><a href="/features/">Features</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/#download">Download</a></li>
         </ul>
       </div>

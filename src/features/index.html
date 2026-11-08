@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Features — StruTrix Studio</title>
-<meta name="description" content="What StruTrix Studio computes: the 3D frame model, loads and ASCE 7-22 combinations, first-order and direct analysis, the equilibrium audit, AISC 360-22 steel design by LRFD and ASD, tapered tubes to ASCE 48-19, results, reports and exports, and what version 1 leaves out. Free, with no limit on model size." />
+<meta name="description" content="What StruTrix Studio computes: the 3D frame model, loads and ASCE 7-22 combinations, first-order and direct analysis, the equilibrium audit, staged construction analysis, AISC 360-22 steel design by LRFD and ASD, seismic design by AISC 341-22, tapered tubes to ASCE 48-19, results, reports and exports, and what version 1 leaves out. Free, with no limit on model size." />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#0a0f1c" />
 <meta property="og:type" content="website" />
@@ -33,6 +33,7 @@
           <li><a href="/features/">Features</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
@@ -71,12 +72,15 @@
         <li><a href="#loads">Loads</a></li>
         <li><a href="#combinations">Combinations</a></li>
         <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#staged">Staged construction</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#design">Steel design</a></li>
+        <li><a href="#seismic">Seismic design</a></li>
         <li><a href="#tubes">Tapered tubes</a></li>
         <li><a href="#lines">Line loading</a></li>
         <li><a href="#data">Reports and data</a></li>
         <li><a href="#cloud">Cloud</a></li>
+        <li><a href="#link">Structure link</a></li>
         <li><a href="#connect">Your AI</a></li>
         <li><a href="#limits">Limits</a></li>
         <li><a href="#validation">Validation</a></li>
@@ -262,6 +266,62 @@
     </div>
   </section>
 
+  <!-- ===================== Staged construction (Pro) ===================== -->
+  <section id="staged" class="spotlight on-dark" aria-labelledby="staged-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Staged construction analysis &middot; Pro &middot; New in 1.105</p>
+        <h2 id="staged-title">An addition analysed on the structure <span class="grad">as it actually stands.</span></h2>
+        <p>The part of a structure that stands first already carries its sustained loads, and stands deformed under them, when the next part is built onto it. Analysed as one structure, the addition's stiffness would share loads it never carried: the existing members are understated and the new ones overstated. StruTrix Studio analyses each combination stage by stage instead. In the User's Manual's own example, a column added under an existing roof beam, the conventional analysis puts the existing columns' axial force 36% low and the new column's 60% high, and the governing ratio falls from 0.48 to 0.30. <a href="/#staged">See the comparison</a>.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">The stages</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Built in the order you build it</h3>
+          <ul class="check-list">
+            <li>Stages numbered from 0 in the order the structure is built, as many as it needs, each named and described in the Construction Stages table</li>
+            <li>Every member and rigid link built in a stage; every joint's supports acting from a stage; every load case put on in a stage</li>
+            <li>Made staged in one step you can undo: everything already modelled in stage 0, the dead load cases with it, the other cases in stage 1</li>
+            <li>Set Stage on the selection, and a Stage column in the Members, Rigid Links, Supports and Load Cases tables</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">The analysis</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Each stage on the structure standing then</h3>
+          <ul class="check-list">
+            <li>Each combination solved stage by stage by its own analysis: first-order, the direct analysis method or second-order elastic</li>
+            <li>Every member carrying its axial force, &tau;<sub>b</sub> and deformed shape into the next stage, the change of axial force acting through the shape it already stands in</li>
+            <li>A new member fitted unstressed through where its ends, and every point along it, stand: a column under a sagged beam is as long as the gap it fills</li>
+            <li>A one-way member or spring that lets go hands what it carried to the rest; a stage's own weight and notional loads are put on in that stage</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Results and design</p><span class="badge badge--premium">Pro</span></div>
+          <h3>The final state, and every step to it</h3>
+          <ul class="check-list">
+            <li>The final state, the whole state after each stage, and what each later stage alone added, in the drawing, the legends, the diagrams and the tables</li>
+            <li>Each stage's own equilibrium audited as well as the final state's</li>
+            <li>The steel designed on the final state; an existing member's detail says what it carried before the addition</li>
+            <li>A beam's deflection limited only under what was added after it stood: an existing beam's dead-load sag is not a later stage's to limit</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Checks and records</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Nothing put on what is not built</h3>
+          <ul class="check-list">
+            <li>A load on a member not yet built, or a displacement before the support that holds it, left out and said</li>
+            <li>The structure after each stage must stand on its own, and a stage that changes nothing is said</li>
+            <li>The calculation report states the stages: the members each builds, the supports acting from it and the load cases put on in it</li>
+            <li>An IFC or Revit export writes each member's stage, existing or new; a staged model is kept in the cloud</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="clauses reveal" aria-label="Provisions">
+        <li>AISC 360-22 C2</li><li>C2.1(d)</li><li>C2.2b</li><li>C2.3</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ===================== Results ===================== -->
   <section id="results" class="alt-band" aria-labelledby="results-title">
     <div class="container">
@@ -337,6 +397,82 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== Seismic design (Pro) ===================== -->
+  <section id="seismic" class="alt-band" aria-labelledby="seismic-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--premium">Seismic design &middot; Pro &middot; New in 1.105</p>
+        <h2 id="seismic-title">The seismic force-resisting system, designed by AISC&nbsp;341&#8209;22.</h2>
+        <p>A Building model's seismic force-resisting systems are designed by ANSI/AISC 341-22 with the seismic requirements of ASCE 7-22, beside the AISC 360-22 design every member already has: a member of a system must pass both. The site's design accelerations and risk category give the seismic design category; in category A the steel is designed by AISC 360-22 alone. A model holding a seismic design is kept in the cloud.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Systems and roles</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Each member's role, found from the model</h3>
+          <ul class="check-list">
+            <li>Ordinary, intermediate and special moment frames; ordinary and special cantilever column systems; ordinary and special concentrically braced frames; eccentrically braced frames; buckling-restrained braced frames; dual systems</li>
+            <li>Each system by its row of ASCE 7-22 Table 12.2-1, R, &Omega;<sub>0</sub> and C<sub>d</sub>, the least R along each axis governing</li>
+            <li>You assign the beams and braces; a column's systems are found from what frames into it, a V-type beam and its braces from where they land, a link from its braces</li>
+            <li>Collectors and members supporting discontinuous frames marked Overstrength</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">ASCE 7-22</p><span class="badge badge--premium">Pro</span></div>
+          <h3>The equivalent lateral force, drift and stability</h3>
+          <ul class="check-list">
+            <li>The seismic weight from your load cases, the period approximate, stated or by the Rayleigh quotient, the base shear and its distribution up the stories</li>
+            <li>The accidental torsion in both senses and the torsional irregularity, written as earthquake load cases</li>
+            <li>The combinations with the seismic load effect including overstrength, generated with the others</li>
+            <li>Each story's design drift and stability coefficient along each axis, against Table 12.12-1's allowable drift</li>
+            <li>Rigid diaphragms: a level held as one body in its plane (free)</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">The members</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Ductility, bracing, slenderness and steel</h3>
+          <ul class="check-list">
+            <li>Each element's width-to-thickness ratio, highly or moderately ductile as its system and role require (Tables D1.1a and D1.1b)</li>
+            <li>The beams' stability bracing and the braces' slenderness</li>
+            <li>The steel's yield stress and its expected strengths R<sub>y</sub>F<sub>y</sub> and R<sub>t</sub>F<sub>u</sub>, from Table A3.2 or your tests</li>
+            <li>Every column's axial strength under the combinations with overstrength; a special cantilever column's stability bracing</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Capacity design</p><span class="badge badge--premium">Pro</span></div>
+          <h3>The frames designed for what their braces can deliver</h3>
+          <ul class="check-list">
+            <li>Capacity-limited analyses of the whole frame: the braces' expected and post-buckling strengths, the links' adjusted strengths, the buckling-restrained braces' adjusted strengths</li>
+            <li>A column common to frames along both axes under both at once, and a dual system's moment frames at 25 %</li>
+            <li>Each eccentrically braced frame's link: its shear, length, rotation and stiffeners</li>
+            <li>A buckling-restrained brace's strength and expected deformation against its qualification tests</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Moment frames</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Connections and joints by AISC 358-22</h3>
+          <ul class="check-list">
+            <li>The beam side of a prequalified connection: a reduced beam section, an end plate, a bolted flange plate, a welded unreinforced flange-welded web, or a tested connection</li>
+            <li>The probable moment at the hinge and at the column face, and the beam's shear</li>
+            <li>Each joint's strong-column weak-beam ratio, panel zone and doubler, and continuity plates</li>
+          </ul>
+        </div>
+        <div class="spec-card reveal">
+          <div class="spec-card__head"><p class="card__kicker">Bases, splices and documents</p><span class="badge badge--premium">Pro</span></div>
+          <h3>Required strengths, and what the drawings must show</h3>
+          <ul class="check-list">
+            <li>Every column base's required axial, shear and flexural strengths, and every column splice's where a column line changes section</li>
+            <li>The braced frames' connections' required strengths</li>
+            <li>What the construction documents must show: protected zones with their extents, demand critical welds, stability bracing, gussets and tapered splices</li>
+            <li>The protected zones drawn on their members, a seismic section in the calculation report, and each seismic member's design in the IFC file</li>
+          </ul>
+        </div>
+      </div>
+      <ul class="clauses reveal" aria-label="Provisions">
+        <li>ANSI/AISC 341-22</li><li>ANSI/AISC 358-22</li><li>ASCE 7-22 &sect;12.2</li><li>&sect;12.8</li><li>&sect;12.12</li><li>Table 12.2-1</li>
+      </ul>
     </div>
   </section>
 
@@ -446,6 +582,29 @@
     </div>
   </section>
 
+  <!-- ===================== The structure link (Pro) ===================== -->
+  <section id="link" aria-labelledby="link-title">
+    <div class="container">
+      <div class="assistant reveal">
+        <div class="assistant__text">
+          <p class="eyebrow eyebrow--premium">Pro &middot; The structure link &middot; New in 1.105</p>
+          <h2 id="link-title">Reactions handed to your foundations and piles.</h2>
+          <p>A save after a run carries each support's reactions under each basic load case and each combination solved. FoundaTrix Studio and PileTrix Studio, in the same job, read them as their loads, the latest saved version before every run.</p>
+          <ul class="check-list">
+            <li>FoundaTrix Studio: each support's dead, live, roof live, snow, rain, wind and earthquake cases, combined by its own foundation combinations; or your strength and allowable stress combinations as they were solved; a footing placed at each support, or the pedestals there loaded</li>
+            <li>PileTrix Studio: one support's reactions, under a combination or a basic load case, as the loads at a pile's head in the plane you choose</li>
+            <li>Each analysis there records the version it read, and its next run takes a newer saved version and says so</li>
+            <li>Only a structure saved with a current run is read; a combination with overstrength and a service combination are offered to neither program</li>
+          </ul>
+          <p class="assistant__note">Reactions are handed over as the loads on the foundation, in kips and kip-feet along the global axes. Reading a structure is a Pro feature of FoundaTrix Studio and PileTrix Studio and needs a StruTrix Studio subscription or trial as well.</p>
+        </div>
+        <figure class="assistant__art">
+          <img src="/images/screens/structure-link.svg" width="1200" height="760" loading="lazy" alt="Illustration: a steel frame analysed in StruTrix Studio and saved with its support reactions to the cloud; FoundaTrix Studio reads them as the loads on a footing at each support, and PileTrix Studio reads one support's reactions as the loads at a pile's head, always from the latest saved version." />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== Your own AI assistant ===================== -->
   <section id="connect" class="assistant-band on-dark" aria-labelledby="connect-title">
     <div class="container">
@@ -488,8 +647,8 @@
           <p>No modal, response-spectrum or time-history analysis, and no material nonlinearity: members are linearly elastic, with small displacements.</p>
         </div>
         <div class="card reveal">
-          <h3>No building wind or seismic generators</h3>
-          <p>Wind and earthquake load cases on a building are entered as loads; the line loading writes a line's wind on its wires and structure.</p>
+          <h3>No building wind generator</h3>
+          <p>Wind load cases on a building are entered as loads; its earthquake cases are generated by the equivalent lateral force, and no modal response spectrum analysis is offered. The line loading writes a line's wind on its wires and structure.</p>
         </div>
         <div class="card reveal">
           <h3>Direct analysis for design</h3>
@@ -497,11 +656,19 @@
         </div>
         <div class="card reveal">
           <h3>Steel members only</h3>
-          <p>No concrete, wood, cold-formed steel or aluminium design, and no connection or base plate design.</p>
+          <p>No concrete, wood, cold-formed steel or aluminium design, and no connection or base plate design; a seismic design reports the connections' required strengths.</p>
         </div>
         <div class="card reveal">
-          <h3>No sag-tension</h3>
-          <p>A wire's tensions are the line designer's. No guys, broken-wire or construction cases, and no lattice towers.</p>
+          <h3>Lines, within their limits</h3>
+          <p>A conductor's change of state takes one final modulus, with creep as an equivalent temperature; clearances are checked at the structure and over level ground. No guys and no lattice towers.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Construction stages</h3>
+          <p>A support's fixity cannot change between stages; creep, shrinkage, a temperature history, demolition and the removal of shoring are not staged; a Transmission model is analysed as built at once.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Seismic design</h3>
+          <p>Composite systems, steel plate shear walls, special truss moment frames, multi-tiered braced frames and built-up members are not designed, nor a connection's plates, bolts and welds; exceptions that need a nonlinear analysis are not taken.</p>
         </div>
       </div>
     </div>
@@ -521,6 +688,7 @@
         <div class="card reveal"><p class="card__kicker">Closed form</p><h3>Supports and releases</h3><p>A fixed-ended beam whose support settles carries 12EI&Delta;/L&sup3; and 6EI&Delta;/L&sup2;; one that turns, 4EI&theta;/L and 2EI&theta;/L; a determinate one tilts and carries nothing.</p></div>
         <div class="card reveal"><p class="card__kicker">Statics</p><h3>Equilibrium, every time</h3><p>Every combination's reactions balance its loads within a millionth of their size, and a printed report's reactions are held to the loads its factors put on the frame, worked by hand.</p></div>
         <div class="card reveal"><p class="card__kicker">ASCE 48-19</p><h3>Tube properties</h3><p>The closed forms of Appendix B held to an independent integration of the outlines, and to every round HSS of the AISC database.</p></div>
+        <div class="card reveal"><p class="card__kicker">Stages and seismic</p><h3>Held to the plain analysis and to hand</h3><p>A structure built in one stage reproduces the plain analysis exactly, a staged rule is tested against an unstaged run of the same final state, and the seismic checks are held to the Provisions' equations worked by hand.</p></div>
         <div class="card reveal"><p class="card__kicker">Citations</p><h3>Every check names its clause</h3><p>A design check written without the clause it comes from fails a test, so every ratio you read can be traced to the page.</p></div>
       </div>
     </div>
@@ -537,6 +705,8 @@
         <li>ANSI/AISC 360-22 (2022). <em>Specification for Structural Steel Buildings.</em> American Institute of Steel Construction.</li>
         <li>AISC (2023). <em>Steel Construction Manual</em>, 16th ed., and the AISC Shapes Database, version 16.0.</li>
         <li>AISC Design Guide 28. <em>Stability Design of Steel Buildings.</em></li>
+        <li>ANSI/AISC 341-22 (2022). <em>Seismic Provisions for Structural Steel Buildings.</em> American Institute of Steel Construction.</li>
+        <li>ANSI/AISC 358-22 (2022). <em>Prequalified Connections for Special and Intermediate Steel Moment Frames for Seismic Applications.</em> American Institute of Steel Construction.</li>
         <li>ASCE/SEI 7-22 (2022). <em>Minimum Design Loads and Associated Criteria for Buildings and Other Structures.</em> American Society of Civil Engineers.</li>
         <li>ASCE/SEI 48-19 (2019). <em>Design of Steel Transmission Pole Structures.</em> American Society of Civil Engineers.</li>
         <li>ASCE (2020). <em>Electrical Transmission Line Structural Loading</em>, Manual of Practice No. 74, 4th ed.</li>
@@ -576,6 +746,7 @@
           <li><a href="/features/">Features</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
           <li><a href="/#download">Download</a></li>
         </ul>
       </div>

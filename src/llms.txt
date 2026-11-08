@@ -10,6 +10,9 @@
 - AISC 360-22 steel design by LRFD and ASD for the sections of the AISC Shapes Database v16.0, every check with its clause, and Optimise, which chooses the lightest section of each group that passes.
 - Joint, member, area and thermal loads and self-weight; the ASCE 7-22 load combination generator; line loading by the NESC, ASCE MOP 74 and MOP 113.
 - The calculation report.
+- Staged construction analysis (Pro): an addition to an existing structure, or a structure built in any number of stages, analysed as it is built. Each stage's loads are carried by the structure standing then, and new members are fitted to where the structure stands. A conventional analysis of the structure built at once lets new members share loads the existing ones carried before they were there, which understates the forces in the existing members and misplaces the load distribution.
+- Seismic design of steel systems by ANSI/AISC 341-22 (Pro), with ASCE 7-22's equivalent lateral force, story drift and stability, the capacity-limited analyses of braced frames, the member side of ANSI/AISC 358-22 prequalified moment connections, and the required strengths of column bases, splices and connections.
+- The structure link (Pro): FoundaTrix Studio and PileTrix Studio read a saved structure's support reactions from the same cloud job as their loads.
 
 ## Free, with no limits
 
@@ -17,13 +20,14 @@
 - No time limit, no watermark, no advertising and no telemetry. No account is needed, and it works offline.
 - It is not a student, educational or evaluation edition: it is the same professional program in every plan, and nothing restricts commercial use.
 - A free account adds cloud jobs shared with FoundaTrix Studio and PileTrix Studio, version history, an AI assistant connector, and a free trial of every Pro feature.
-- Pro features include tapered tubes to ASCE/SEI 48-19 with the pole and H-frame generators, IFC 4.3 and Revit export, and the firm's name and logo on the report. Pro pricing has not been announced.
+- Pro features include staged construction analysis, seismic design by AISC 341-22, tapered tubes to ASCE/SEI 48-19 with the pole and H-frame generators, IFC 4.3 and Revit export, the firm's name and logo on the report, and the structure link. Pro pricing has not been announced.
 
 ## Pages
 
 - [Home](https://www.strutrix.com/): what the program does, the plans, and what is coming soon
 - [Features](https://www.strutrix.com/features/): the engineering in detail, and what version 1 leaves out
 - [Pricing](https://www.strutrix.com/pricing/): the free, signed-in and Pro plans compared, and questions answered
+- [What's new](https://www.strutrix.com/whats-new/): every release and what it brings, newest first
 - [Support](https://www.strutrix.com/support/): the user's manual, bug reports and feature requests
 - [Microsoft Store listing](https://apps.microsoft.com/detail/9PM7B70ZXWRC): where to get it
 - [Terms of use](https://www.strutrix.com/terms/) and [privacy policy](https://www.strutrix.com/privacy/)
