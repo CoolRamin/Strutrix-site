@@ -28,6 +28,9 @@
   "downloadUrl": "https://apps.microsoft.com/detail/9PM7B70ZXWRC",
   "installUrl": "https://apps.microsoft.com/detail/9PM7B70ZXWRC",
   "isAccessibleForFree": true,
+  "softwareVersion": "1.105",
+  "datePublished": "2026-11-01",
+  "sameAs": ["https://apps.microsoft.com/detail/9PM7B70ZXWRC", "https://github.com/CoolRamin/Strutrix-site"],
   "description": "Professional structural analysis and design of three-dimensional frames for practising engineers on real projects: first-order and AISC 360-22 direct analysis of every load combination, steel member design by LRFD and ASD, ASCE 7-22 load combinations, and an independent equilibrium audit. Free, with no limit on model size, no time limit, no watermark and no account required.",
   "audience": { "@type": "Audience", "audienceType": "Professional structural engineers" },
   "featureList": [
@@ -37,9 +40,12 @@
     "The lightest passing section of each group (Optimise)",
     "ASCE 7-22 load combination generator; joint, member, area and thermal loads",
     "An independent equilibrium audit of every result",
+    "A member detail that works every check equation by equation with its clause, in a window or as a PDF",
+    "Strengths held to the AISC Design Examples and second-order results to the AISC 360-22 Commentary benchmarks, published at https://www.strutrix.com/verification/",
     "The calculation report",
     "Staged construction analysis: an addition to an existing structure, or any number of construction stages (Pro)",
-    "Seismic design of steel systems by AISC 341-22 with ASCE 7-22's equivalent lateral force and story drift (Pro)"
+    "Seismic design of steel systems by AISC 341-22 with ASCE 7-22's equivalent lateral force and story drift (Pro)",
+    "Export to IFC 4.3 and to Revit as native structural framing (Pro)"
   ],
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "No account and no limits: any model size, no time limit, no watermark, commercial use; the analysis, the steel design and the calculation report." },
@@ -71,6 +77,7 @@
       <nav aria-label="Primary">
         <ul class="nav__links">
           <li><a href="/features/">Features</a></li>
+          <li><a href="/verification/">Verification</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/whats-new/">What's new</a></li>
@@ -382,7 +389,7 @@
       </ul>
       <p class="types-note reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-        <span><strong>Frames of members, static loads, elastic members.</strong> Version 1 analyses members only: a floor or a wall enters as the loads it delivers to them. Dynamics and material nonlinearity are outside it; the limits are stated plainly on the <a href="/features/#limits">features page</a>.</span>
+        <span><strong>Frames of members, static loads, elastic members.</strong> It analyses members only: a floor or a wall enters as the loads it delivers to them. Dynamics and material nonlinearity are outside it; the limits are stated plainly on the <a href="/features/#limits">features page</a>.</span>
       </p>
     </div>
   </section>
@@ -401,6 +408,23 @@
         <li class="chip"><strong>NESC</strong> IEEE C2-2023</li>
         <li class="chip"><strong>IFC</strong> 4.3</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Verification ===================== -->
+  <section id="verified" class="spotlight on-dark" aria-labelledby="verified-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Verification</p>
+        <h2 id="verified-title">Held to the answers AISC published. <span class="grad">Number by number, in public.</span></h2>
+        <p>The answers were worked by AISC, not by us. StruTrix Studio's results stand beside them on the verification page, and automated tests repeat the comparisons with every build.</p>
+      </div>
+      <ul class="stat-strip" aria-label="How closely the results match the published answers">
+        <li class="stat reveal"><span class="stat__value">46 of 46</span><span class="stat__label">Strengths from the AISC Design Examples, by LRFD and ASD, within 1.35%; 43 of them within 1%.</span></li>
+        <li class="stat reveal"><span class="stat__value">0.37%</span><span class="stat__label">The largest difference from the AISC 360-22 Commentary's second-order benchmarks, which ask for 3% in moment and 5% in deflection.</span></li>
+        <li class="stat reveal"><span class="stat__value">1,700+</span><span class="stat__label">Automated tests across the analysis, the steel checks, the load combinations and the program.</span></li>
+      </ul>
+      <p class="spotlight__note reveal"><a href="/verification/">See every comparison, and where the program stands on what steel design software has to do.</a></p>
     </div>
   </section>
 
@@ -930,6 +954,7 @@
         <h2>Product</h2>
         <ul>
           <li><a href="/features/">Features</a></li>
+          <li><a href="/verification/">Verification</a></li>
           <li><a href="/#pro">Pro</a></li>
           <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/whats-new/">What's new</a></li>

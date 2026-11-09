@@ -44,3 +44,14 @@ jobs:
           output_location: ""
           api_location: ""
           skip_app_build: true
+
+      # Asks the search engines that take IndexNow to read the site again now, rather than whenever they next come by.
+      # The key is the file src/4f5207f94b32b3e8d6d0275d1a26f596.txt, which proves the request is the site's own. A failure here
+      # never fails the deployment.
+      - name: Tell search engines what changed (IndexNow)
+        if: env.HAS_TOKEN == 'true'
+        continue-on-error: true
+        run: |
+          urls=$(grep -oE '<loc>[^<]+</loc>' src/sitemap.xml | sed -E 's#</?loc>##g' | sed -E 's/.*/"&"/' | paste -sd, -)
+          body='{"host":"www.strutrix.com","key":"4f5207f94b32b3e8d6d0275d1a26f596","keyLocation":"https://www.strutrix.com/4f5207f94b32b3e8d6d0275d1a26f596.txt","urlList":['"$urls"']}'
+          curl -sS -o /dev/null -w 'IndexNow answered %{http_code}\n' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body"

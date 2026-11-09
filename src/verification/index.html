@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Verification: AISC 360-22 Results Against Published Answers — StruTrix Studio</title>
+<meta name="description" content="StruTrix Studio's results beside the answers AISC published: 46 strengths from the AISC Design Examples within 1.35%, and the AISC 360-22 Commentary's second-order benchmarks within 0.37%. Where the program stands on code checks, load combinations, calculation reports, BIM and connection design." />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#0a0f1c" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="StruTrix Studio" />
+<meta property="og:url" content="https://www.strutrix.com/verification/" />
+<meta property="og:title" content="StruTrix Studio verification: the numbers beside AISC's published answers" />
+<meta property="og:description" content="46 strengths from the AISC Design Examples within 1.35%, and the AISC 360-22 Commentary's second-order benchmarks within 0.37%, shown number by number." />
+<link rel="canonical" href="https://www.strutrix.com/verification/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/styles.css" />
+<script src="/site.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can StruTrix Studio be used for real steel design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, within its scope. It is professional software for practising engineers: three-dimensional frames of linearly elastic members under static loads, analysed to first order or by the AISC 360-22 direct analysis method, with every steel member designed by LRFD or ASD. As with any program, the engineer stays responsible for the model, the loads and the results. Connections are designed separately for now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are its AISC 360-22 checks verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are held to the answers AISC published: 46 strengths from the AISC Design Examples within 1.35%, 43 of them within 1%, and the AISC 360-22 Commentary's second-order benchmarks within 0.37%. This page sets each one beside the program's value, and automated tests repeat them with every build. They are RamisoftSolutions' own comparisons; AISC and ASCE have not reviewed or endorsed the program."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it generate load combinations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ASCE 7-22 combination generator writes the strength, allowable stress and service combinations, with notional loads. The line loading writes a transmission line's combinations by the NESC, ASCE MOP 74 or MOP 113."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it produce calculation reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, free and with no watermark: a typeset PDF of the basis, the model, the loads, the combinations, the equilibrium, the reactions and every member's checks clause by clause. A member detail works every check equation by equation with its clause, in a window or as a PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with BIM tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It exports to IFC 4.3 with true steel profiles, and to Revit 2025, 2026 and 2027 as native structural columns and framing through the Ramisoft add-in. Both are Pro features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it design connections?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Today it designs the members, and a seismic design reports the connections' required strengths. Connection design is in development as a Pro feature, down to every plate, bolt and weld by AISC 360-22 Chapter J and ANSI/AISC 358-22."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which design codes does it cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "United States standards: AISC 360-22, ANSI/AISC 341-22, the member side of ANSI/AISC 358-22, ASCE 7-22, ASCE/SEI 48-19, ASCE MOP 74 and MOP 113, and the NESC. Eurocode, AS/NZS and other national steel codes are not offered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it a student or educational program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is the same professional program in every plan, made for practising engineers on real projects. The analysis and the steel design are free with no limit on model size or time, no watermark and no account, and nothing restricts commercial use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long has it been available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "StruTrix Studio is new: it reached the Microsoft Store on November 1, 2026, so it does not yet have a long record of use, and its evidence is published here for that reason. Its frame analysis engine and steel checks also ship in FoundaTrix Studio."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="/" aria-label="StruTrix Studio home">
+      <img class="brand__mark" src="/images/strutrix-mark.svg" alt="" width="34" height="34" />
+      <span class="brand__name">StruTrix <span>Studio</span></span>
+    </a>
+    <div class="nav__menu" id="site-menu">
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/verification/">Verification</a></li>
+          <li><a href="/#pro">Pro</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <a class="icon-btn" href="https://github.com/CoolRamin/Strutrix-site" target="_blank" rel="noopener" aria-label="StruTrix Studio on GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        </a>
+        <a class="btn btn--primary btn--sm" href="/#download">Download free</a>
+      </div>
+    </div>
+    <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero on-dark" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Verification</p>
+      <h1 id="page-title">The numbers, beside the answers AISC published.</h1>
+      <p>A steel design program has to show its work. Here StruTrix Studio's results stand next to the answers printed in the AISC Design Examples and the AISC 360-22 Commentary, measured on the code of the released version, 1.105. The program is free, so you can model any of these and check them yourself.</p>
+      <ul class="stat-strip" aria-label="How closely the results match the published answers">
+        <li class="stat reveal"><span class="stat__value">46 of 46</span><span class="stat__label">Strengths from the AISC Design Examples within 1.35%; 43 of them within 1%.</span></li>
+        <li class="stat reveal"><span class="stat__value">0.37%</span><span class="stat__label">The largest difference from the Commentary's second-order benchmarks, which ask for 3% in moment and 5% in deflection.</span></li>
+        <li class="stat reveal"><span class="stat__value">1,700+</span><span class="stat__label">Automated tests, repeated with every build.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="On this page">
+    <div class="container">
+      <ul>
+        <li><a href="#members">Steel members</a></li>
+        <li><a href="#second-order">Second-order analysis</a></li>
+        <li><a href="#closed-forms">Closed forms</a></li>
+        <li><a href="#guards">How a wrong check is caught</a></li>
+        <li><a href="#standing">Where it stands</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== Steel members ===================== -->
+  <section id="members" aria-labelledby="members-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">AISC Design Examples</p>
+        <h2 id="members-title">Steel member strengths.</h2>
+        <p>The strength AISC printed for each example, and the strength StruTrix Studio works for the same member, lengths and steel, by LRFD and by ASD.</p>
+      </div>
+      <div class="compare-wrap reveal">
+        <table class="compare compare--dense">
+          <caption>LRFD columns give the design strength &phi;R<sub>n</sub> and ASD columns the allowable strength R<sub>n</sub>/&Omega;.</caption>
+          <thead>
+            <tr><th scope="col">Example and member</th><th scope="col">Quantity</th><th scope="col">LRFD, AISC</th><th scope="col">LRFD, StruTrix Studio</th><th scope="col">ASD, AISC</th><th scope="col">ASD, StruTrix Studio</th><th scope="col">Largest difference</th></tr>
+          </thead>
+          <tbody>
+            <tr class="group"><th colspan="7" scope="colgroup">Tension (yielding)</th></tr>
+            <tr><th scope="row">D.1<small>W8X21</small></th><td>P<sub>n</sub>, kips</td><td>277</td><td>277.2</td><td>184</td><td>184.4</td><td>0.23%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Compression</th></tr>
+            <tr><th scope="row">E.1C<small>W14X132, 30 ft</small></th><td>P<sub>n</sub>, kips</td><td>892</td><td>892.6</td><td>598</td><td>593.9</td><td>0.69%</td></tr>
+            <tr><th scope="row">E.1D<small>W14X90, 30 ft and 15 ft</small></th><td>P<sub>n</sub>, kips</td><td>927</td><td>927.5</td><td>617</td><td>617.1</td><td>0.05%</td></tr>
+            <tr><th scope="row">E.7<small>WT7X34, 20 ft</small></th><td>P<sub>n</sub>, kips</td><td>128</td><td>127.9</td><td>85.0</td><td>85.07</td><td>0.11%</td></tr>
+            <tr><th scope="row">E.9<small>HSS12X10X3/8</small></th><td>P<sub>n</sub>, kips</td><td>518</td><td>517.8</td><td>344</td><td>344.5</td><td>0.15%</td></tr>
+            <tr><th scope="row">E.11<small>Pipe10STD</small></th><td>P<sub>n</sub>, kips</td><td>221</td><td>218.6</td><td>147</td><td>145.4</td><td>1.09%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Flexure</th></tr>
+            <tr><th scope="row">F.1-3B<small>W18X50, 35 ft, braced at midspan</small></th><td>M<sub>n</sub>, kip-ft</td><td>288</td><td>287.9</td><td>192</td><td>191.6</td><td>0.23%</td></tr>
+            <tr><th scope="row">F.7A<small>HSS10X6X3/16</small></th><td>M<sub>n</sub>, kip-ft</td><td>57.0</td><td>56.99</td><td>37.9</td><td>37.92</td><td>0.04%</td></tr>
+            <tr><th scope="row">F.8A<small>HSS8X8X3/16</small></th><td>M<sub>n</sub>, kip-ft</td><td>43.3</td><td>43.31</td><td>28.8</td><td>28.82</td><td>0.06%</td></tr>
+            <tr><th scope="row">F.9A<small>Pipe8XS</small></th><td>M<sub>n</sub>, kip-ft</td><td>81.4</td><td>81.38</td><td>54.1</td><td>54.14</td><td>0.08%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Shear</th></tr>
+            <tr><th scope="row">G.1A<small>W24X62</small></th><td>V<sub>n</sub>, kips</td><td>306</td><td>305.7</td><td>204</td><td>203.8</td><td>0.09%</td></tr>
+            <tr><th scope="row">G.2A<small>C15X33.9</small></th><td>V<sub>n</sub>, kips</td><td>117</td><td>116.6</td><td>77.6</td><td>77.60</td><td>0.31%</td></tr>
+            <tr><th scope="row">G.3<small>L5X3X1/4</small></th><td>V<sub>n</sub>, kips</td><td>24.3</td><td>24.30</td><td>16.2</td><td>16.17</td><td>0.20%</td></tr>
+            <tr><th scope="row">G.4<small>HSS6X4X3/8</small></th><td>V<sub>n</sub>, kips</td><td>86.0</td><td>85.88</td><td>57.2</td><td>57.14</td><td>0.14%</td></tr>
+            <tr><th scope="row">G.5<small>HSS16.000X0.375</small></th><td>V<sub>n</sub>, kips</td><td>195</td><td>195.0</td><td>130</td><td>129.8</td><td>0.17%</td></tr>
+            <tr><th scope="row">G.6<small>W21X48, weak axis</small></th><td>V<sub>n</sub>, kips</td><td>189</td><td>189.0</td><td>126</td><td>125.8</td><td>0.19%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Torsion of hollow sections</th></tr>
+            <tr><th scope="row">H.5A<small>HSS6X4X1/4</small></th><td>T<sub>n</sub>, kip-in</td><td>251</td><td>250.9</td><td>167</td><td>166.9</td><td>0.05%</td></tr>
+            <tr><th scope="row">H.5B<small>HSS5.000X0.250</small></th><td>T<sub>n</sub>, kip-in</td><td>180</td><td>180.3</td><td>120</td><td>120.0</td><td>0.17%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Combined forces, and flexure with torsion</th></tr>
+            <tr><th scope="row">H.1B<small>W14X99, 14 ft</small></th><td>P<sub>n</sub>, kips</td><td>1,130</td><td>1,127.8</td><td>750</td><td>750.4</td><td>0.20%</td></tr>
+            <tr><th scope="row">H.1B<small>W14X99, 14 ft</small></th><td>M<sub>nx</sub>, kip-ft</td><td>642</td><td>642.3</td><td>428</td><td>427.4</td><td>0.15%</td></tr>
+            <tr><th scope="row">H.1B<small>W14X99, 14 ft</small></th><td>M<sub>ny</sub>, kip-ft</td><td>311</td><td>311.2</td><td>207</td><td>207.0</td><td>0.05%</td></tr>
+            <tr><th scope="row">H.1B<small>W14X99, 14 ft</small></th><td>Interaction, Eq. H1-1a</td><td>0.928</td><td>0.9292</td><td>0.931</td><td>0.9320</td><td>0.13%</td></tr>
+            <tr><th scope="row">H.6<small>W10X49, torsion and flexure</small></th><td>Normal stress, ksi</td><td>&ndash;</td><td>&ndash;</td><td>26.9</td><td>27.26</td><td>1.35%</td></tr>
+            <tr><th scope="row">H.6<small>W10X49, torsion and flexure</small></th><td>Shear stress, ksi</td><td>&ndash;</td><td>&ndash;</td><td>7.56</td><td>7.509</td><td>0.68%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="verify-note reveal">The examples are those of the AISC Design Examples companion, V14.0, chosen where the provision an example works is unchanged in the 2022 Specification. The examples were worked on the 14th edition's section tables and StruTrix Studio uses the AISC Shapes Database v16.0, so a difference of a few tenths of a percent is expected. The largest, 1.35%, is the normal stress of Example H.6: the example reads its torsional functions from Design Guide 9's charts, and the program solves the warping exactly. Example F.1-3B is the beam braced at its ends and centre, with C<sub>b</sub> worked by Equation F1-1.</p>
+    </div>
+  </section>
+
+  <!-- ===================== Second-order ===================== -->
+  <section id="second-order" class="alt-band" aria-labelledby="second-order-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">AISC 360-22 Commentary</p>
+        <h2 id="second-order-title">Second-order analysis.</h2>
+        <p>The Commentary to Section C2 gives two benchmark problems for judging a second-order analysis (Figures C-C2.2 and C-C2.3), and asks that a program agree within 3% in moment and 5% in deflection. These are the values with shear deformation.</p>
+      </div>
+      <div class="compare-wrap reveal">
+        <table class="compare compare--dense">
+          <thead>
+            <tr><th scope="col">Axial load P, kips</th><th scope="col">Moment, Commentary (kip-in.)</th><th scope="col">Moment, StruTrix Studio</th><th scope="col">Difference</th><th scope="col">Deflection, Commentary (in.)</th><th scope="col">Deflection, StruTrix Studio</th><th scope="col">Difference</th></tr>
+          </thead>
+          <tbody>
+            <tr class="group"><th colspan="7" scope="colgroup">Case 1: W14X48, 28 ft, simply supported, 0.200 kip/ft across it. Moment and deflection at midspan (P-&delta;)</th></tr>
+            <tr><th scope="row">0</th><td>235</td><td>235.2</td><td>0.09%</td><td>0.202</td><td>0.2015</td><td>0.23%</td></tr>
+            <tr><th scope="row">150</th><td>270</td><td>269.8</td><td>0.08%</td><td>0.230</td><td>0.2305</td><td>0.20%</td></tr>
+            <tr><th scope="row">300</th><td>316</td><td>315.9</td><td>0.03%</td><td>0.269</td><td>0.2691</td><td>0.02%</td></tr>
+            <tr><th scope="row">450</th><td>380</td><td>380.6</td><td>0.16%</td><td>0.322</td><td>0.3231</td><td>0.35%</td></tr>
+            <tr class="group"><th colspan="7" scope="colgroup">Case 2: W14X48, 28 ft cantilever, 1.0 kip across its tip. Moment at the base, deflection at the tip (P-&Delta; and P-&delta;)</th></tr>
+            <tr><th scope="row">0</th><td>336</td><td>336.0</td><td>0.00%</td><td>0.907</td><td>0.9072</td><td>0.03%</td></tr>
+            <tr><th scope="row">100</th><td>470</td><td>470.3</td><td>0.07%</td><td>1.34</td><td>1.343</td><td>0.25%</td></tr>
+            <tr><th scope="row">150</th><td>601</td><td>601.8</td><td>0.14%</td><td>1.77</td><td>1.772</td><td>0.13%</td></tr>
+            <tr><th scope="row">200</th><td>856</td><td>857.9</td><td>0.22%</td><td>2.60</td><td>2.610</td><td>0.37%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Closed forms ===================== -->
+  <section id="closed-forms" aria-labelledby="closed-forms-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Closed forms</p>
+        <h2 id="closed-forms-title">Where the answer can be written down.</h2>
+        <p>Without shear deformation, both benchmark problems have exact solutions. Over axial loads from 100 to 900 kips, the program's moments and deflections agree with the beam-column closed forms within 0.00001%. Automated tests hold other results the same way: a fixed-ended beam whose support settles carries 12EI&Delta;/L&sup3; and 6EI&Delta;/L&sup2;, and a structure built in one stage reproduces the plain analysis exactly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Guards ===================== -->
+  <section id="guards" class="alt-band" aria-labelledby="guards-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Automated tests</p>
+        <h2 id="guards-title">How a wrong check is caught.</h2>
+        <p>Published examples cover particular cases. These rules apply to every check, and a build that breaks one fails its tests.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal"><h3>Every check names its clause</h3><p>A design check written without the clause it comes from fails a test, so every ratio can be traced to the page of the standard.</p></div>
+        <div class="card reveal"><h3>Every line of the working is evaluated</h3><p>Each line of a member's working that shows numbers is computed again from its own inputs and must give that step's result, so a line that drops a term or an input fails.</p></div>
+        <div class="card reveal"><h3>The working is the check</h3><p>The equations you read in a member's detail are recorded by the design's own functions and held to the design's result to the last bit. There is no second statement of a check to fall out of step.</p></div>
+        <div class="card reveal"><h3>LRFD and ASD share one strength</h3><p>Over more than 3,000 strengths across every section family, the ASD strength is the same nominal strength over its &Omega; where LRFD takes its &phi;, each factor from its own clause.</p></div>
+        <div class="card reveal"><h3>Equilibrium, every combination</h3><p>A separate calculation sums each combination's loads and reactions, and the report prints the result. Reactions balance loads within a millionth of their size.</p></div>
+        <div class="card reveal"><h3>More than 1,700 automated tests</h3><p>Across the analysis engine, the steel checks, the load combinations, the model and the program itself, and repeated with every build.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Where it stands ===================== -->
+  <section id="standing" aria-labelledby="standing-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Plainly</p>
+        <h2 id="standing-title">What steel design software has to do, and where StruTrix Studio stands.</h2>
+        <p>What it does today, what is a Pro feature, and what it does not do yet. The <a href="/features/#limits">features page</a> lists every limit.</p>
+      </div>
+      <div class="compare-wrap reveal">
+        <table class="compare compare--text">
+          <thead>
+            <tr><th scope="col">Requirement</th><th scope="col">Status</th><th scope="col">What the program does</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Design-code checks</th><td><span class="badge badge--free">In the program</span></td><td>AISC 360-22 by LRFD and ASD at points no more than six inches apart, under every combination designed: tension, compression, flexure, shear, torsion and combined forces, with unbraced lengths found from the structure and every check citing its clause.</td></tr>
+            <tr><th scope="row">Seismic and transmission design</th><td><span class="badge badge--premium">Pro</span></td><td>Seismic design by ANSI/AISC 341-22 with ASCE 7-22: moment frames, cantilever column systems, and concentrically, eccentrically and buckling-restrained braced frames. Tapered tubes by ASCE/SEI 48-19.</td></tr>
+            <tr><th scope="row">Load combinations</th><td><span class="badge badge--free">In the program</span></td><td>The ASCE 7-22 generator writes the strength, allowable stress and service combinations, with notional loads, and a combination can be typed as it reads.</td></tr>
+            <tr><th scope="row">Traceable calculations</th><td><span class="badge badge--free">In the program</span></td><td>A member detail works every check equation by equation with its clause, in a window or as a PDF. The typeset calculation report states the basis, the model, the loads, the combinations, the equilibrium, the reactions and every member's checks clause by clause. Free, with no watermark.</td></tr>
+            <tr><th scope="row">BIM exchange</th><td><span class="badge badge--premium">Pro</span></td><td>Export to IFC 4.3 with true steel profiles, and to Revit 2025, 2026 and 2027 as native structural columns and framing through the Ramisoft add-in.</td></tr>
+            <tr><th scope="row">Documentation</th><td><span class="badge badge--free">In the program</span></td><td>A built-in User's Manual in seventeen sections states every method, assumption and limit, with pictured tutorials and the standards it follows.</td></tr>
+            <tr><th scope="row">Model size</th><td><span class="badge badge--free">In the program</span></td><td>No limit on joints, members, load cases or combinations. Developed and timed on a building of about 10,000 members, the analysis running on every core.</td></tr>
+            <tr><th scope="row">Documented verification</th><td><span class="badge badge--free">On this page</span></td><td>The published answers above, beside the program's, and the automated tests that repeat them.</td></tr>
+            <tr><th scope="row">Connection design</th><td><span class="badge badge--soon">In development</span></td><td>Not in the released program. It designs the members; a seismic design works the member side of ANSI/AISC 358-22 prequalified moment connections and reports the connections' required strengths. Design of plates, bolts and welds by AISC 360-22 Chapter J is in development.</td></tr>
+            <tr><th scope="row">Other countries' codes</th><td><span class="badge badge--plain">Not offered</span></td><td>The steel design follows United States standards. Eurocode, AS/NZS and other national steel codes are not offered.</td></tr>
+            <tr><th scope="row">Record of use</th><td><span class="badge badge--plain">New</span></td><td>In the Microsoft Store since November 1, 2026, so it does not yet have a long record of use. Its frame analysis engine and steel checks also ship in FoundaTrix Studio.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Questions ===================== -->
+  <section id="questions" class="alt-band" aria-labelledby="questions-title">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <p class="eyebrow">Questions</p>
+        <h2 id="questions-title">Is it ready for real work?</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal" open>
+          <summary>Can StruTrix Studio be used for real steel design?</summary>
+          <div><p>Yes, within its scope. It is professional software for practising engineers: three-dimensional frames of linearly elastic members under static loads, analysed to first order or by the AISC 360-22 direct analysis method, with every steel member designed by LRFD or ASD. As with any program, the engineer stays responsible for the model, the loads and the results. Connections are designed separately for now.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Are its AISC 360-22 checks verified?</summary>
+          <div><p>They are held to the answers AISC published: 46 strengths from the AISC Design Examples within 1.35%, 43 of them within 1%, and the AISC 360-22 Commentary's second-order benchmarks within 0.37%. This page sets each one beside the program's value, and automated tests repeat them with every build. They are RamisoftSolutions' own comparisons; AISC and ASCE have not reviewed or endorsed the program.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Does it generate load combinations?</summary>
+          <div><p>Yes. The ASCE 7-22 combination generator writes the strength, allowable stress and service combinations, with notional loads. The line loading writes a transmission line's combinations by the NESC, ASCE MOP 74 or MOP 113.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Does it produce calculation reports?</summary>
+          <div><p>Yes, free and with no watermark: a typeset PDF of the basis, the model, the loads, the combinations, the equilibrium, the reactions and every member's checks clause by clause. A member detail works every check equation by equation with its clause, in a window or as a PDF.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Does it work with BIM tools?</summary>
+          <div><p>It exports to IFC 4.3 with true steel profiles, and to Revit 2025, 2026 and 2027 as native structural columns and framing through the Ramisoft add-in. Both are Pro features.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Does it design connections?</summary>
+          <div><p>Not yet. Today it designs the members, and a seismic design reports the connections' required strengths. Connection design is in development as a Pro feature, down to every plate, bolt and weld by AISC 360-22 Chapter J and ANSI/AISC 358-22.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Which design codes does it cover?</summary>
+          <div><p>United States standards: AISC 360-22, ANSI/AISC 341-22, the member side of ANSI/AISC 358-22, ASCE 7-22, ASCE/SEI 48-19, ASCE MOP 74 and MOP 113, and the NESC. Eurocode, AS/NZS and other national steel codes are not offered.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Is it a student or educational program?</summary>
+          <div><p>No. It is the same professional program in every plan, made for practising engineers on real projects. The analysis and the steel design are free with no limit on model size or time, no watermark and no account, and nothing restricts commercial use.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>How long has it been available?</summary>
+          <div><p>StruTrix Studio is new: it reached the Microsoft Store on November 1, 2026, so it does not yet have a long record of use, and its evidence is published here for that reason. Its frame analysis engine and steel checks also ship in FoundaTrix Studio.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" aria-label="Engineering responsibility">
+    <div class="container">
+      <div class="callout reveal" role="note">
+        <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+        <div>
+          <h3>Whose comparisons these are</h3>
+          <p>These comparisons are RamisoftSolutions' own. AISC and ASCE have not reviewed or endorsed StruTrix Studio. A published example checks the program on that example, and does not establish that a model represents a structure: the engineer stays responsible for the model, the loads and the results, which must be reviewed by a licensed engineer before they are relied on in a stamped submittal. See the <a href="/terms/">terms of use</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="closing-title">
+    <div class="container closing reveal">
+      <h2 id="closing-title">Run a frame you already know the answer to.</h2>
+      <p>Download StruTrix Studio free from the Microsoft Store, with no account, and check it against a case you trust.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href="/#download">Download free</a>
+        <a class="btn btn--ghost btn--lg" href="/features/">See the features</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/" aria-label="StruTrix Studio home">
+          <img class="brand__mark" src="/images/strutrix-mark.svg" alt="" width="34" height="34" />
+          <span class="brand__name">StruTrix <span>Studio</span></span>
+        </a>
+        <p>Structural analysis and steel design of three-dimensional frames, for Windows. A <a class="company-link" href="https://www.ramisoftsolutions.com/" target="_blank" rel="noopener">RamisoftSolutions</a> product.</p>
+        <p class="sibling">Also from RamisoftSolutions: <a href="https://www.foundatrix.com/" target="_blank" rel="noopener">FoundaTrix Studio</a>, analysis and design of rigid foundations of any shape, and <a href="https://www.piletrix.com/" target="_blank" rel="noopener">PileTrix Studio</a>, lateral and axial pile analysis. One account signs in to all three.</p>
+      </div>
+      <div class="footer__col">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/verification/">Verification</a></li>
+          <li><a href="/#pro">Pro</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/whats-new/">What's new</a></li>
+          <li><a href="/#download">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="/support/">Help and contact</a></li>
+          <li><a href="https://github.com/CoolRamin/Strutrix-site/issues/new?template=bug_report.yml" target="_blank" rel="noopener">Report a bug</a></li>
+          <li><a href="https://github.com/CoolRamin/Strutrix-site/issues/new?template=feature_request.yml" target="_blank" rel="noopener">Request a feature</a></li>
+          <li><a href="mailto:admin@ramisoftsolutions.com">Email us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 <a class="company-link" href="https://www.ramisoftsolutions.com/" target="_blank" rel="noopener">RamisoftSolutions</a> &middot; Built and maintained in California, United States</span>
+      <div class="footer__social">
+        <a class="icon-btn" href="https://github.com/CoolRamin/Strutrix-site" target="_blank" rel="noopener" aria-label="StruTrix Studio on GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/company/ramisoftsolutions/" target="_blank" rel="noopener" aria-label="RamisoftSolutions on LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Back to top" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+</body>
+</html>
