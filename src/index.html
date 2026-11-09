@@ -290,7 +290,7 @@
       </div>
       <p class="types-note reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-        <span><strong>What it leaves to you.</strong> Composite systems, plate shear walls, special truss moment frames and multi-tiered braced frames are not designed, nor are a connection's plates, bolts and welds (their required strengths are reported). The full list is on the <a href="/features/#seismic">features page</a>.</span>
+        <span><strong>What it leaves to you.</strong> Composite systems, plate shear walls, special truss moment frames and multi-tiered braced frames are not designed, nor are a connection's plates, bolts and welds (their required strengths are reported; <a href="#connection-design">connection design is coming soon</a>). The full list is on the <a href="/features/#seismic">features page</a>.</span>
       </p>
     </div>
   </section>
@@ -687,10 +687,30 @@
     <div class="container">
       <div class="section-head section-head--center reveal">
         <p class="eyebrow">Coming soon</p>
-        <h2 id="soon-title">Buildings stacked from typical floors, and steel pushed past yield.</h2>
-        <p>Two features on their way: a multi-storey building modelled from its typical floors, free with an account, and a seismic assessment of steel buildings by the nonlinear static procedure of ASCE&nbsp;41-23, a Pro feature.</p>
+        <h2 id="soon-title">Connections designed bolt by bolt, buildings stacked from typical floors, and steel pushed past yield.</h2>
+        <p>Three features on their way: the design of a steel frame's connections, down to every plate, bolt and weld, a Pro feature; a multi-storey building modelled from its typical floors, free with an account; and a seismic assessment of steel buildings by the nonlinear static procedure of ASCE&nbsp;41-23, a Pro feature.</p>
       </div>
       <div class="soon-grid">
+        <article id="connection-design" class="soon-card reveal">
+          <div class="type-card__art"><img src="/images/soon/connection-design.svg" width="520" height="280" loading="lazy" alt="Illustration of the connection editor: a steel beam framing into a column's flange through a single plate, drawn in 3D on the true sections with the plate, its five bolts and its weld each in a colour of its own, beside a list of the checks by part, bolts, plate, welds and the beam's end, each with a bar showing how hard it is working." /></div>
+          <div class="soon-card__body">
+            <div class="soon-card__badges"><span class="badge badge--soon">In development</span><span class="badge badge--premium">Pro</span></div>
+            <h3>Steel connection design, in a 3D connection editor</h3>
+            <p>Design a frame's connections down to every plate, bolt and weld. Choose a connection from the library and assign it to the member ends it suits: it is fitted to the true sections it joins, and each limit state is checked by the clause it cites, under every design combination of the analysis.</p>
+            <ul class="check-list check-list--sm">
+              <li>A library of connection types: single plates, double angles, shear end plates, seats, single angles, tees, shear splices and bracket plates; flange-plated, directly welded and end-plate moment connections; with bracing connections, column splices and base plates to follow</li>
+              <li>The prequalified moment connections of ANSI/AISC&nbsp;358&#8209;22 (reduced beam section, bolted end plates, bolted flange plate, and welded unreinforced flange-welded web), designed for the moment and shear the seismic design works at the column's face</li>
+              <li>Fitted to the members: the rows of bolts that fit the web, the plate's length and the top bolt's place worked from the true sections, and anything you state kept as you state it</li>
+              <li>A 3D editor with every plate, bolt and weld drawn to size and clickable: change a diameter or a thickness in its properties and the design follows at once, each part coloured by how hard it is working</li>
+              <li>Assigned end by end or automatically by what carries each beam, shown on the model by coloured symbols, and designed with the analysis by LRFD or ASD</li>
+              <li>Every check worked out equation by equation with its clause, and printed in a report of the connection with its drawing</li>
+              <li>Your own connections kept in a cloud library, ready for your other projects; a model holding connections is saved to the cloud</li>
+            </ul>
+            <ul class="clauses" aria-label="Provisions">
+              <li>AISC 360-22 Chapter J</li><li>AISC 358-22</li><li>AISC 341-22</li><li>Design Guides 1 and 4</li>
+            </ul>
+          </div>
+        </article>
         <article id="building" class="soon-card reveal">
           <div class="type-card__art"><img src="/images/soon/building-modeler.svg" width="520" height="280" loading="lazy" alt="Illustration of the multi-storey building modeller: a typical floor drawn in plan on grid lines A to D and 1 to 3, with its beams, the column points beneath it and two braced bays, copied up five storeys into a six-storey braced steel building whose columns line up from its supports to its roof." /></div>
           <div class="soon-card__body">
@@ -811,6 +831,7 @@
           <ul class="check-list check-list--premium check-list--sm">
             <li>Staged construction analysis</li>
             <li>Seismic design by AISC 341-22</li>
+            <li>Connection design (coming soon)</li>
             <li>Tapered tubes, poles and H-frames</li>
             <li>IFC 4.3 and Revit export</li>
             <li>Your firm on the report</li>

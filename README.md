@@ -62,6 +62,32 @@ size or time and no account required.
 Every release's notes are in [CHANGELOG.md](CHANGELOG.md) and on the website's
 [What's new](https://www.strutrix.com/whats-new/) page.
 
+## Coming soon
+
+These are not available yet, and what each will do may change before it ships. Everything above describes the program as
+it is today.
+
+- **Connection design** (Pro, in development): a steel frame's connections designed down to every plate, bolt and weld by
+  AISC 360-22 Chapter J. A connection is chosen from a library and assigned to the member ends it suits, fitted to the true
+  sections it joins, and each limit state is checked by the clause it cites, under every design combination of the
+  analysis, by LRFD or ASD.
+  - **The library**: single plates, double angles, shear end plates, seats, single angles, tees, shear splices and bracket
+    plates; flange-plated, directly welded and end-plate moment connections; with bracing connections, column splices and
+    base plates to follow.
+  - **Prequalified moment connections** of ANSI/AISC 358-22 (reduced beam section, bolted end plates, bolted flange plate,
+    and welded unreinforced flange-welded web), designed for the moment and shear the seismic design works at the column's
+    face.
+  - **A 3D connection editor**: every plate, bolt and weld drawn to size and clickable; change a diameter or a thickness in
+    its properties and the design follows at once, each part coloured by how hard it is working.
+  - **On the model**: connections assigned end by end or automatically by what carries each beam, and shown by coloured
+    symbols.
+  - **The working**: every check worked out equation by equation with its clause, and printed in a report of the connection
+    with its drawing.
+  - **Your own library**: your connections kept in the cloud, ready for your other projects. A model holding connections is
+    saved to the cloud.
+- **Also on the way**: multi-storey buildings modelled from typical floors (free with an account), and the seismic
+  assessment of steel buildings by pushover to ASCE 41-23 (Pro).
+
 ## Common questions
 
 - **Does StruTrix Studio do staged construction analysis?** Yes, since version 1.105 in the Microsoft Store, as a Pro
@@ -70,11 +96,15 @@ Every release's notes are in [CHANGELOG.md](CHANGELOG.md) and on the website's
 - **Does it design for seismic loads?** Yes: seismic force-resisting systems are designed to ANSI/AISC 341-22 with
   ASCE 7-22's equivalent lateral force, drift and stability (Pro). It does not run a modal response spectrum or
   time-history analysis.
+- **Does it design connections?** Not yet. Today it designs the members, and a seismic design reports the connections'
+  required strengths. Connection design is in development as a Pro feature, down to every plate, bolt and weld by
+  AISC 360-22 Chapter J and ANSI/AISC 358-22: see [Coming soon](#coming-soon).
 - **Is it free?** The modelling, the loads, the combinations, the analysis, the AISC 360-22 steel design and the
   calculation report are free, with no limit on model size or time, no watermark and no account. It is professional
   software for real projects, not a student or evaluation edition. The Pro features are a separate set, free to try.
 - **What does it not do?** Plates, walls and solids, dynamics, material nonlinearity, concrete, wood and cold-formed
-  steel design, and the design of connections' plates, bolts and welds. The website's features page lists every limit.
+  steel design, and, until connection design ships, the design of connections' plates, bolts and welds. The website's
+  features page lists every limit.
 
 ## About this repository
 
@@ -110,7 +140,7 @@ source: no engine code, no model files, no cloud configuration, no build output 
 
 | Path | File | What it is |
 |---|---|---|
-| `/` | `src/index.html` | Home: what the program does, the newest release's features (staged construction analysis `#staged`, seismic design `#seismic`), the frames it generates, the free analysis and design, Pro, the structure link (`#link`), what is coming soon (multi-storey buildings and the pushover), your AI assistant, plans, download, support |
+| `/` | `src/index.html` | Home: what the program does, the newest release's features (staged construction analysis `#staged`, seismic design `#seismic`), the frames it generates, the free analysis and design, Pro, the structure link (`#link`), what is coming soon (connection design, multi-storey buildings and the pushover), your AI assistant, plans, download, support |
 | `/whats-new/` | `src/whats-new/index.html` | Every Store release, newest first: a new `article.release` card goes on top with each release (the newest marked `release--latest`), its lines from the release's Store "What's new" and the manual's version history |
 | `/features/` | `src/features/index.html` | The engineering in detail: the model, loads, combinations, analysis, staged construction, results, steel design, seismic design, tapered tubes, line loading, data, cloud, the structure link, the AI assistant, limits, validation, references |
 | `/pricing/` | `src/pricing/index.html` | Free, signed in, and Pro, with a comparison table and questions |
@@ -192,11 +222,12 @@ menu builds) are illustrations.
 
 | What | Where | Now |
 |---|---|---|
-| Microsoft Store link | `src/index.html`, `#download`; every "Download free" button goes to `/#download` | Listed since 2026-11-01 (Store ID 9PM7B70ZXWRC): the panel's button and the pricing FAQ link to https://apps.microsoft.com/detail/9PM7B70ZXWRC (the announce bar announces the newest release and links `/whats-new/` since 2026-11-07); every "Download free" button goes to `/#download`. `.store-btn--soon` stays in the stylesheet unused; `.badge--soon` marks the Coming soon cards' state (Planned, Next release) |
+| Microsoft Store link | `src/index.html`, `#download`; every "Download free" button goes to `/#download` | Listed since 2026-11-01 (Store ID 9PM7B70ZXWRC): the panel's button and the pricing FAQ link to https://apps.microsoft.com/detail/9PM7B70ZXWRC (the announce bar announces the newest release and links `/whats-new/` since 2026-11-07); every "Download free" button goes to `/#download`. `.store-btn--soon` stays in the stylesheet unused; `.badge--soon` marks the Coming soon cards' state (In development, Planned, Next release) |
 | The Pro split | Home `#pro`, `#plans`; `/pricing/` | Stated as the program's premium catalogue has it: tapered tubes (with the Pole and H-Frame generators), IFC and Revit export, the firm on the report, search by a structure's inputs, and the structure link; everything else free |
 | The structure link | Home `#link` (art `src/images/screens/structure-link.svg`), `#pro`, `#plans`; Features `#link`; `/pricing/` | Shipped: both readers went live in the Microsoft Store on 2026-11-07 (FoundaTrix Studio 1.168, PileTrix Studio 12.029), after the API redeploy and the structure migrations. The sections came back with issue 87's corrections (by category D, L, Lr, S, R, W and E; a combination with overstrength and a service combination offered to neither reader; the plane chosen in PileTrix Studio). `src/images/soon/structure-link.svg` is unused since, kept with the Coming soon art |
 | Staged construction analysis and seismic design | Home `#staged` and `#seismic`, `#pro`, `#plans`; Features `#staged`, `#seismic`, `#limits`; `/pricing/`; `/whats-new/` | Shipped in StruTrix Studio 1.105 (in the Store as 1.1.5.0, 2026-11-07), both Pro. The staged comparison's numbers are the User's Manual's tutorial (section 13.3): 13.2 against 20.6 kip in the existing columns (36% low), 39.6 against 24.7 kip in the new column (60% high), the governing ratio 0.48 against 0.30, the beam's existing sag 49.9 kip-ft. Change them only with the tutorial. `src/images/soon/staged-construction.svg` is unused since |
 | Multi-storey buildings from typical floors | Home `#soon` (its card is `#building`, art `src/images/soon/building-modeler.svg`), `#plans`; `/pricing/` (the Signed in plan and the comparison's Modelling and loads row) | In Coming soon since 2026-11-07 ("Planned", Free account): the plan is approved (LateralPile issue 90) and not started. A free feature for a signed-in engineer; a building still in the modeller is saved to the cloud only. When it ships, move it into the Features page and the Home features, and take "(coming soon)" off the Signed in plan and the comparison row |
+| Connection design | Home `#soon` (its card is `#connection-design`, art `src/images/soon/connection-design.svg`), `#plans` (the Pro plan) and the note under `#seismic`; Features `#limits`; `/pricing/` (the Pro plan and the comparison's Analysis and design row); `src/llms.txt`; this README's "Coming soon" and "Common questions" | In Coming soon since 2026-11-08 ("In development", Pro): the library, the 3D editor and the design are being built, and a model holding connections is saved to the cloud. When it ships, move it into the Features page and the Home features, take "(coming soon)" off the Pro plans and the comparison row, and rewrite every sentence that says connections are not designed (Home `#seismic` and its closing note, Features `#seismic` and `#limits`, the terms of use) |
 | Free, with no limits, for real projects | Home: the announce bar (beside the newest release), the hero's assurances, `#free` (two tiles: No limit on model size, Made for real projects), the Free plan; `/pricing/`: the headline, the Free plan, three questions (model size, real projects, a catch); the descriptions of Home, Features and Pricing; `src/llms.txt`; the JSON-LD on Home and `/pricing/` | Stated on 2026-11-07 at the owner's word (AI search tools had read "free to start" as a limited or educational edition). Each claim was checked in the program: no cap on joints, members, cases or combinations (a generator makes up to 20,000 members a run and its preview draws up to 2,000; neither limits a model); no watermark (the report never draws one); the terms restrict no commercial use; developed and timed on the 9,723-member building of `tools/StrutrixPerf`. The Pro features are a separate set and stay named as such. The FAQ's JSON-LD is worked from the page's own questions: change a question, change the block. Never write "free to start" again |
 | The assistant connector | Home `#connect`; Features `#connect` | Advertised as the program's manual describes it |
 

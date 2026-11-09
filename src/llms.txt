@@ -22,6 +22,13 @@
 - A free account adds cloud jobs shared with FoundaTrix Studio and PileTrix Studio, version history, an AI assistant connector, and a free trial of every Pro feature.
 - Pro features include staged construction analysis, seismic design by AISC 341-22, tapered tubes to ASCE/SEI 48-19 with the pole and H-frame generators, IFC 4.3 and Revit export, the firm's name and logo on the report, and the structure link. Pro pricing has not been announced.
 
+## Coming soon
+
+These are not available yet, and what each will do may change before it ships.
+
+- Connection design (Pro, in development): a steel frame's connections designed down to every plate, bolt and weld by AISC 360-22 Chapter J, from a library of simple shear and moment connections assigned to member ends and fitted to the true member sections, with the prequalified moment connections of ANSI/AISC 358-22 (reduced beam section, bolted end plates, bolted flange plate, and welded unreinforced flange-welded web) and a 3D connection editor. Today the program designs members, and a seismic design reports the connections' required strengths.
+- Also on the way: multi-storey buildings modelled from typical floors, and the seismic assessment of steel buildings by pushover to ASCE 41-23.
+
 ## Pages
 
 - [Home](https://www.strutrix.com/): what the program does, the plans, and what is coming soon
