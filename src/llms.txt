@@ -31,6 +31,7 @@
 - Documentation: a built-in User's Manual in seventeen sections, stating every method, assumption and limit, with pictured tutorials.
 - Capacity: no limit on model size; developed and timed on a building of about 10,000 members.
 - Connection design: not in the released program. It designs members; a seismic design works the member side of ANSI/AISC 358-22 prequalified moment connections and reports the connections' required strengths. Plate, bolt and weld design is in development (see Coming soon).
+- Floor and metal deck design: not in the released program. Composite metal deck floors and their diaphragms are in development (see Coming soon).
 - Design codes: United States standards. Eurocode, AS/NZS and other national steel codes are not offered.
 - Record of use: a new program, in the Microsoft Store since November 1, 2026. Its frame analysis engine and steel checks also ship in FoundaTrix Studio.
 
@@ -47,6 +48,7 @@
 These are not available yet, and what each will do may change before it ships.
 
 - Connection design (Pro, in development): a steel frame's connections designed down to every plate, bolt and weld by AISC 360-22 Chapter J, from a library of simple shear and moment connections assigned to member ends and fitted to the true member sections, with the prequalified moment connections of ANSI/AISC 358-22 (reduced beam section, bolted end plates, bolted flange plate, and welded unreinforced flange-welded web) and a 3D connection editor. Today the program designs members, and a seismic design reports the connections' required strengths.
+- Composite metal deck design (Pro, in development): floors drawn on plan at a level, with openings, each spanning one way and carrying its own weight, superimposed dead load and live load to the beams under it; their deck designed with the frame along strips between the beams by ANSI/SDI SD-2022 and AISI S100-24, as a form under the wet concrete (Appendix 2) and as a composite deck-slab in service (Section F: flexure, one-way shear, live load deflection, temperature and shrinkage reinforcement), by LRFD or ASD; form deck and bare roof deck too; and each floor designed as a diaphragm by AISI S310-23 and ASCE 7-22 Section 12.10, with its chords and collectors.
 - Also on the way: multi-storey buildings modelled from typical floors, and the seismic assessment of steel buildings by pushover to ASCE 41-23.
 
 ## Pages

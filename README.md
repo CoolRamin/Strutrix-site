@@ -101,6 +101,21 @@ it is today.
     with its drawing.
   - **Your own library**: your connections kept in the cloud, ready for your other projects. A model holding connections is
     saved to the cloud.
+- **Composite metal deck design** (Pro, in development): floors drawn on plan and designed with the frame, the deck as a form
+  while the concrete is wet and deck and concrete together as a composite slab in service, along strips between the beams that
+  carry it, each check citing its clause, by LRFD or ASD.
+  - **Floors**: drawn on plan at a level as rectangles or outlines of any shape, with openings, each spanning one way in the
+    direction chosen and carrying its own weight, superimposed dead load and live load to the beams under it.
+  - **Floor types**: composite steel deck-slab, form deck with concrete, or bare roof deck; the deck's profile, gauge and steel,
+    the concrete's thickness, strength and density, and the shrinkage reinforcement.
+  - **As a form**, by ANSI/SDI SD-2022 Appendix 2: the deck's strength and deflection under the wet concrete and the
+    construction loads, with ponding.
+  - **In service**, by SD-2022 Section F: the composite slab's flexure, the lesser of its ultimate and bond strengths, its
+    one-way shear, its live load deflection and its temperature and shrinkage reinforcement, with patterned live load.
+  - **The diaphragm**: each floor designed along both axes, its unit shear by AISI S310-23, its chords and collectors, and its
+    flexibility by ASCE 7-22 Section 12.3.1 where left to calculation.
+  - **The working**: a detail of each floor and its calculation report, every check worked with its clause, and the floors
+    coloured on the model by their result. A model holding floors is saved to the cloud.
 - **Also on the way**: multi-storey buildings modelled from typical floors (free with an account), and the seismic
   assessment of steel buildings by pushover to ASCE 41-23 (Pro).
 
@@ -137,8 +152,8 @@ it is today.
   calculation report are free, with no limit on model size or time, no watermark and no account. It is professional
   software for real projects, not a student or evaluation edition. The Pro features are a separate set, free to try.
 - **What does it not do?** Plates, walls and solids, dynamics, material nonlinearity, concrete, wood and cold-formed
-  steel design, and, until connection design ships, the design of connections' plates, bolts and welds. The website's
-  features page lists every limit.
+  steel design, and, until connection design and composite metal deck design ship, the design of connections' plates, bolts
+  and welds and of metal deck floors. The website's features page lists every limit.
 
 ## Reporting bugs and requesting features
 
